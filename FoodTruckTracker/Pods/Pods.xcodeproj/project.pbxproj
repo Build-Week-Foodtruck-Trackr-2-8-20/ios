@@ -1,0 +1,870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0BEFF694065E377FB404FCBC5BA83A4C /* Pods-FoodTruckTrackerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C95208E47D35EBEF14EF3816126B7F00 /* Pods-FoodTruckTrackerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3734301CCFCAFE56D5A41231176A9229 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4870F93FE261525811CE6F9A5CD42AB4 /* Pods-FoodTruckTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A731162848A94A6949ABF71491DF320B /* Pods-FoodTruckTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D3D643417CF9E43B5D0A32F55877A4A /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0930A42E0EDAFC54A33B96821B500E8B /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		588EF9A1C1E6C16963C507AD0382F94A /* Pods-FoodTruckTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3FC214264F68049A24B4F3C77A41C6 /* Pods-FoodTruckTracker-dummy.m */; };
+		9997448B89F8DCEC068AAAE78C9BF592 /* Pods-FoodTruckTrackerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F20F59263E49F0719A78C6C7F23489CB /* Pods-FoodTruckTrackerTests-dummy.m */; };
+		C5B0AD8A1B5849B983615E53B6CF7114 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BC33C67CA2D51FA7ED3BE8184CDBE /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m */; };
+		CB1115161C082A85E2C88F17634BDB4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		DF42CE780C35822B1A279D9E9D786358 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		417009FD78866216544357FFB671F704 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		53B3C99A7B52F6A784AA593F77C41B78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		A8D06EA3EC42D0539F3D94B962344C8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 717DCF688C74675855C62A9F43F56902;
+			remoteInfo = "Pods-FoodTruckTracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0930A42E0EDAFC54A33B96821B500E8B /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h"; sourceTree = "<group>"; };
+		12FE4C84A9FA5297B65A29F05BA84B5C /* Pods_FoodTruckTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodTruckTracker.framework; path = "Pods-FoodTruckTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C655A41122885D406373E52D78012FF /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		31BBF0BE91EF199D315B8D2C8BBE228D /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests-Info.plist"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		336C8627CCF626DE24F4675B449FBD9D /* Pods-FoodTruckTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTracker-Info.plist"; sourceTree = "<group>"; };
+		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		4D19AD49297032CB4342A3186A3D5873 /* Pods-FoodTruckTrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		52102BB41502E5194B89CCD5B2198B7E /* Pods-FoodTruckTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		524307F9F8155C4705C0F532AD0472BD /* Pods-FoodTruckTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53AD280E10BC8D3DA98AC98048D16A98 /* Pods-FoodTruckTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5421E22587F3C238CE4CD058D552A46C /* Pods-FoodTruckTrackerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodTruckTrackerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E9E55DDFF7FF3A40826E94E3352700E /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		802FE23A578488A9CEEEC3112520CD37 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8789E5228EC3E420A16716360331AE46 /* Pods-FoodTruckTrackerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodTruckTrackerTests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A731162848A94A6949ABF71491DF320B /* Pods-FoodTruckTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodTruckTracker-umbrella.h"; sourceTree = "<group>"; };
+		C67265C79F787A8FC46D2026AF776A19 /* Pods-FoodTruckTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodTruckTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C95208E47D35EBEF14EF3816126B7F00 /* Pods-FoodTruckTrackerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodTruckTrackerTests-umbrella.h"; sourceTree = "<group>"; };
+		CD0327444FE9827745E993C7FECE8619 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.modulemap"; sourceTree = "<group>"; };
+		CE3AA253721D152ABA2A5F803C114DD6 /* Pods-FoodTruckTrackerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		D88EF04887979254A0FF58CBC1BD6269 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC91AB9251DE76B7AF9677818DE313D3 /* Pods-FoodTruckTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodTruckTracker.modulemap"; sourceTree = "<group>"; };
+		E2042CDD93420D8A8F9280BA424CD138 /* Pods_FoodTruckTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodTruckTrackerTests.framework; path = "Pods-FoodTruckTrackerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92BC33C67CA2D51FA7ED3BE8184CDBE /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m"; sourceTree = "<group>"; };
+		E95C8C8CC7D6402F3FA2DEEB86CA5FC6 /* Pods-FoodTruckTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		EB3FC214264F68049A24B4F3C77A41C6 /* Pods-FoodTruckTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodTruckTracker-dummy.m"; sourceTree = "<group>"; };
+		ECE3072B27791B7B0EBAB70528661FD7 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F20F59263E49F0719A78C6C7F23489CB /* Pods-FoodTruckTrackerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodTruckTrackerTests-dummy.m"; sourceTree = "<group>"; };
+		FD078BAB6C60CABCAAACA54B5406EAF3 /* Pods-FoodTruckTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodTruckTracker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59134F9948AF8ED2D614640A7165F770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1115161C082A85E2C88F17634BDB4F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751502DDF390131C4033D13A45AD4B10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF42CE780C35822B1A279D9E9D786358 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA2576FD15450932CB90A1DDAD2AA0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3734301CCFCAFE56D5A41231176A9229 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		364C880A6804E6D885034946868DB25A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12FE4C84A9FA5297B65A29F05BA84B5C /* Pods_FoodTruckTracker.framework */,
+				5E9E55DDFF7FF3A40826E94E3352700E /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */,
+				E2042CDD93420D8A8F9280BA424CD138 /* Pods_FoodTruckTrackerTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56B2EDA39478158F007701709FF541C0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A50882D3DB06F6EA18F26BEF7C13B850 /* Pods-FoodTruckTracker */,
+				ADA829201BFAEAE6ECB53D3B0A005539 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests */,
+				58CED155EF48091658566DC171CCC2DF /* Pods-FoodTruckTrackerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		58CED155EF48091658566DC171CCC2DF /* Pods-FoodTruckTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8789E5228EC3E420A16716360331AE46 /* Pods-FoodTruckTrackerTests.modulemap */,
+				5421E22587F3C238CE4CD058D552A46C /* Pods-FoodTruckTrackerTests-acknowledgements.markdown */,
+				4D19AD49297032CB4342A3186A3D5873 /* Pods-FoodTruckTrackerTests-acknowledgements.plist */,
+				F20F59263E49F0719A78C6C7F23489CB /* Pods-FoodTruckTrackerTests-dummy.m */,
+				CE3AA253721D152ABA2A5F803C114DD6 /* Pods-FoodTruckTrackerTests-Info.plist */,
+				C95208E47D35EBEF14EF3816126B7F00 /* Pods-FoodTruckTrackerTests-umbrella.h */,
+				524307F9F8155C4705C0F532AD0472BD /* Pods-FoodTruckTrackerTests.debug.xcconfig */,
+				53AD280E10BC8D3DA98AC98048D16A98 /* Pods-FoodTruckTrackerTests.release.xcconfig */,
+			);
+			name = "Pods-FoodTruckTrackerTests";
+			path = "Target Support Files/Pods-FoodTruckTrackerTests";
+			sourceTree = "<group>";
+		};
+		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
+				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A50882D3DB06F6EA18F26BEF7C13B850 /* Pods-FoodTruckTracker */ = {
+			isa = PBXGroup;
+			children = (
+				DC91AB9251DE76B7AF9677818DE313D3 /* Pods-FoodTruckTracker.modulemap */,
+				C67265C79F787A8FC46D2026AF776A19 /* Pods-FoodTruckTracker-acknowledgements.markdown */,
+				E95C8C8CC7D6402F3FA2DEEB86CA5FC6 /* Pods-FoodTruckTracker-acknowledgements.plist */,
+				EB3FC214264F68049A24B4F3C77A41C6 /* Pods-FoodTruckTracker-dummy.m */,
+				336C8627CCF626DE24F4675B449FBD9D /* Pods-FoodTruckTracker-Info.plist */,
+				A731162848A94A6949ABF71491DF320B /* Pods-FoodTruckTracker-umbrella.h */,
+				52102BB41502E5194B89CCD5B2198B7E /* Pods-FoodTruckTracker.debug.xcconfig */,
+				FD078BAB6C60CABCAAACA54B5406EAF3 /* Pods-FoodTruckTracker.release.xcconfig */,
+			);
+			name = "Pods-FoodTruckTracker";
+			path = "Target Support Files/Pods-FoodTruckTracker";
+			sourceTree = "<group>";
+		};
+		ADA829201BFAEAE6ECB53D3B0A005539 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0327444FE9827745E993C7FECE8619 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.modulemap */,
+				802FE23A578488A9CEEEC3112520CD37 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.markdown */,
+				ECE3072B27791B7B0EBAB70528661FD7 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-acknowledgements.plist */,
+				E92BC33C67CA2D51FA7ED3BE8184CDBE /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m */,
+				31BBF0BE91EF199D315B8D2C8BBE228D /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-Info.plist */,
+				0930A42E0EDAFC54A33B96821B500E8B /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h */,
+				2C655A41122885D406373E52D78012FF /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig */,
+				D88EF04887979254A0FF58CBC1BD6269 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig */,
+			);
+			name = "Pods-FoodTruckTracker-FoodTruckTrackerUITests";
+			path = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
+				364C880A6804E6D885034946868DB25A /* Products */,
+				56B2EDA39478158F007701709FF541C0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2EC94E71CADC9FB435621F2488781422 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D3D643417CF9E43B5D0A32F55877A4A /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31370ECB6AB3F4B3EC032095FEEC9319 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BEFF694065E377FB404FCBC5BA83A4C /* Pods-FoodTruckTrackerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66207A67CB879BF8F5782C2AE3815B95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4870F93FE261525811CE6F9A5CD42AB4 /* Pods-FoodTruckTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1743460CF38478B57ABB034AF2A38E3F /* Pods-FoodTruckTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBD293101706896A75B5A3B4C2ABDAC /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTrackerTests" */;
+			buildPhases = (
+				31370ECB6AB3F4B3EC032095FEEC9319 /* Headers */,
+				1A4437B3CAC267B57581AF5BA0E94B4E /* Sources */,
+				59134F9948AF8ED2D614640A7165F770 /* Frameworks */,
+				DA650BDB944060A3E10FD934189CFD66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15D40C078A2D15B52E89ADEEB1ED47DA /* PBXTargetDependency */,
+			);
+			name = "Pods-FoodTruckTrackerTests";
+			productName = "Pods-FoodTruckTrackerTests";
+			productReference = E2042CDD93420D8A8F9280BA424CD138 /* Pods_FoodTruckTrackerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		650355BDCD85EED5D28E17614CF7E580 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74B29E3C7E90B87EB0E63576A0C6EFAC /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTracker-FoodTruckTrackerUITests" */;
+			buildPhases = (
+				2EC94E71CADC9FB435621F2488781422 /* Headers */,
+				646D70D0117251342579FACE5075CA10 /* Sources */,
+				751502DDF390131C4033D13A45AD4B10 /* Frameworks */,
+				3EC89EB48F186C8E2075939EBBCE8845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CCDBF8E0609E4613489FC6FA896C44A /* PBXTargetDependency */,
+			);
+			name = "Pods-FoodTruckTracker-FoodTruckTrackerUITests";
+			productName = "Pods-FoodTruckTracker-FoodTruckTrackerUITests";
+			productReference = 5E9E55DDFF7FF3A40826E94E3352700E /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		717DCF688C74675855C62A9F43F56902 /* Pods-FoodTruckTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F6AC45CC59DBF888C6C2B8DB852B31 /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTracker" */;
+			buildPhases = (
+				66207A67CB879BF8F5782C2AE3815B95 /* Headers */,
+				EBEE72E0DC984979FD83A8CB887E8658 /* Sources */,
+				EEA2576FD15450932CB90A1DDAD2AA0D /* Frameworks */,
+				9E052B13141363D1431A4927AB076779 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C40280B364B4399DF049DA87FCB41024 /* PBXTargetDependency */,
+			);
+			name = "Pods-FoodTruckTracker";
+			productName = "Pods-FoodTruckTracker";
+			productReference = 12FE4C84A9FA5297B65A29F05BA84B5C /* Pods_FoodTruckTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 364C880A6804E6D885034946868DB25A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				717DCF688C74675855C62A9F43F56902 /* Pods-FoodTruckTracker */,
+				650355BDCD85EED5D28E17614CF7E580 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests */,
+				1743460CF38478B57ABB034AF2A38E3F /* Pods-FoodTruckTrackerTests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EC89EB48F186C8E2075939EBBCE8845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E052B13141363D1431A4927AB076779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA650BDB944060A3E10FD934189CFD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A4437B3CAC267B57581AF5BA0E94B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9997448B89F8DCEC068AAAE78C9BF592 /* Pods-FoodTruckTrackerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646D70D0117251342579FACE5075CA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B0AD8A1B5849B983615E53B6CF7114 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE72E0DC984979FD83A8CB887E8658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588EF9A1C1E6C16963C507AD0382F94A /* Pods-FoodTruckTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CCDBF8E0609E4613489FC6FA896C44A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 53B3C99A7B52F6A784AA593F77C41B78 /* PBXContainerItemProxy */;
+		};
+		15D40C078A2D15B52E89ADEEB1ED47DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FoodTruckTracker";
+			target = 717DCF688C74675855C62A9F43F56902 /* Pods-FoodTruckTracker */;
+			targetProxy = A8D06EA3EC42D0539F3D94B962344C8F /* PBXContainerItemProxy */;
+		};
+		C40280B364B4399DF049DA87FCB41024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 417009FD78866216544357FFB671F704 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55DD740115BE746C8DBB7753806D85D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6128C07C1F03B377798B0BCB60D387BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52102BB41502E5194B89CCD5B2198B7E /* Pods-FoodTruckTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81798CBCB223ABC2F98E81237FFB2C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD078BAB6C60CABCAAACA54B5406EAF3 /* Pods-FoodTruckTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A4CC881920F0A90C4A0C6EA67D20EDC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53AD280E10BC8D3DA98AC98048D16A98 /* Pods-FoodTruckTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8660886B55E440DFF2D2CBC7FE5516D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C655A41122885D406373E52D78012FF /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E808A05B971CFEBDBDF02062416055AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D88EF04887979254A0FF58CBC1BD6269 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA7F032AB9EED9653DBFAC2AE5FCC0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524307F9F8155C4705C0F532AD0472BD /* Pods-FoodTruckTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25F6AC45CC59DBF888C6C2B8DB852B31 /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6128C07C1F03B377798B0BCB60D387BD /* Debug */,
+				81798CBCB223ABC2F98E81237FFB2C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
+				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBD293101706896A75B5A3B4C2ABDAC /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7F032AB9EED9653DBFAC2AE5FCC0C9 /* Debug */,
+				A4CC881920F0A90C4A0C6EA67D20EDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74B29E3C7E90B87EB0E63576A0C6EFAC /* Build configuration list for PBXNativeTarget "Pods-FoodTruckTracker-FoodTruckTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8660886B55E440DFF2D2CBC7FE5516D /* Debug */,
+				E808A05B971CFEBDBDF02062416055AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */,
+				55DD740115BE746C8DBB7753806D85D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
