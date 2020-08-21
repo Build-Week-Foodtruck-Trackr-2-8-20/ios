@@ -15,6 +15,8 @@
 		51D93BC624EE1C02009FC1A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D93BC424EE1C02009FC1A4 /* LaunchScreen.storyboard */; };
 		51D93BD124EE1C02009FC1A4 /* FoodTruckTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BD024EE1C02009FC1A4 /* FoodTruckTrackerTests.swift */; };
 		51D93BDC24EE1C02009FC1A4 /* FoodTruckTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BDB24EE1C02009FC1A4 /* FoodTruckTrackerUITests.swift */; };
+		51D93BED24EF5B29009FC1A4 /* FTTData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BEB24EF5B29009FC1A4 /* FTTData.xcdatamodeld */; };
+		51D93BEF24EF5B3E009FC1A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BEE24EF5B3E009FC1A4 /* CoreDataStack.swift */; };
 		60A080282EFC4E043ADEAD9A /* Pods_FoodTruckTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */; };
 		B15DC9239E331808574B2B93 /* Pods_FoodTruckTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303162DB83EEEBDB370A10BF /* Pods_FoodTruckTrackerTests.framework */; };
 		F15ADC7FA9FF140063D711D1 /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA8B1663F5F30EF79D8032D /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */; };
@@ -56,6 +58,8 @@
 		51D93BD724EE1C02009FC1A4 /* FoodTruckTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D93BDB24EE1C02009FC1A4 /* FoodTruckTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckTrackerUITests.swift; sourceTree = "<group>"; };
 		51D93BDD24EE1C02009FC1A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D93BEC24EF5B29009FC1A4 /* FTTData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FTTData.xcdatamodel; sourceTree = "<group>"; };
+		51D93BEE24EF5B3E009FC1A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9DA8B1663F5F30EF79D8032D /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19DE097E57357FB57818C1D /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTruckTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,7 @@
 		51D93BAD24EE1C01009FC1A4 = {
 			isa = PBXGroup;
 			children = (
+				51D93BEA24EF5A71009FC1A4 /* CoreData */,
 				51D93BB824EE1C01009FC1A4 /* FoodTruckTracker */,
 				51D93BCF24EE1C02009FC1A4 /* FoodTruckTrackerTests */,
 				51D93BDA24EE1C02009FC1A4 /* FoodTruckTrackerUITests */,
@@ -156,6 +161,15 @@
 				51D93BDD24EE1C02009FC1A4 /* Info.plist */,
 			);
 			path = FoodTruckTrackerUITests;
+			sourceTree = "<group>";
+		};
+		51D93BEA24EF5A71009FC1A4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				51D93BEB24EF5B29009FC1A4 /* FTTData.xcdatamodeld */,
+				51D93BEE24EF5B3E009FC1A4 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		FA58BAA6FE3BE509867F1019 /* Frameworks */ = {
@@ -389,6 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D93BEF24EF5B3E009FC1A4 /* CoreDataStack.swift in Sources */,
+				51D93BED24EF5B29009FC1A4 /* FTTData.xcdatamodeld in Sources */,
 				51D93BBE24EE1C01009FC1A4 /* ViewController.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,
@@ -726,6 +742,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		51D93BEB24EF5B29009FC1A4 /* FTTData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				51D93BEC24EF5B29009FC1A4 /* FTTData.xcdatamodel */,
+			);
+			currentVersion = 51D93BEC24EF5B29009FC1A4 /* FTTData.xcdatamodel */;
+			path = FTTData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51D93BAE24EE1C01009FC1A4 /* Project object */;
 }
