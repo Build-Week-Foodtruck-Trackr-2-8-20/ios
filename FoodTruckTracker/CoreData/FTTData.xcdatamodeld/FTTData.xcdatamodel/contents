@@ -8,16 +8,37 @@
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Menu" representedClassName="Menu" syncable="YES" codeGenerationType="class">
+        <attribute name="customerRatingAvg" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="customerRatings" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String"/>
+        <attribute name="itemName" optional="YES" attributeType="String"/>
+        <attribute name="itemPhotos" optional="YES" attributeType="String"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="truck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Truck" inverseName="menu" inverseEntity="Truck"/>
+    </entity>
     <entity name="Operator" representedClassName="Operator" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
-        <attribute name="truckLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="truckLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="trucksOwned" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="truck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Truck" inverseName="operator" inverseEntity="Truck"/>
+    </entity>
+    <entity name="Truck" representedClassName="Truck" syncable="YES" codeGenerationType="class">
+        <attribute name="cuisineType" optional="YES" attributeType="String"/>
+        <attribute name="customerRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="customerRatingAvg" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="departureTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageOfTruck" optional="YES" attributeType="String"/>
+        <attribute name="truckLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="truckLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Menu" inverseName="truck" inverseEntity="Menu"/>
+        <relationship name="operator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Operator" inverseName="truck" inverseEntity="Operator"/>
     </entity>
     <elements>
-        <element name="Diner" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="Operator" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="Diner" positionX="-334.48046875" positionY="-214.1875" width="128" height="133"/>
+        <element name="Operator" positionX="-181.98828125" positionY="-207.859375" width="128" height="118"/>
+        <element name="Truck" positionX="-27.01953125" positionY="-208.703125" width="128" height="178"/>
+        <element name="Menu" positionX="124.48828125" positionY="-204.4140625" width="128" height="148"/>
     </elements>
 </model>
