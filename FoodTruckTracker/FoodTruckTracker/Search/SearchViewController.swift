@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
     @IBOutlet private var resultsContainer: UIView!
     
     private let mapVC = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
@@ -16,6 +17,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addChild(listVC)
         resultsContainer.addSubview(listVC.view)
         listVC.didMove(toParent: self)
@@ -23,7 +25,6 @@ class SearchViewController: UIViewController {
         
         addChild(mapVC)
         mapVC.didMove(toParent: self)
-        // Do any additional setup after loading the view.
     }
     
     /*
@@ -35,6 +36,7 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func swapViews(_ sender: UIBarButtonItem) {
         let currentVC = listVC.view.isDescendant(of: view) ? listVC : mapVC
         let destinationVC: UIViewController
