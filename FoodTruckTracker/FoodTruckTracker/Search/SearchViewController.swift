@@ -11,8 +11,8 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet private var resultsContainer: UIView!
     
-    let mapVC = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
-    let listVC = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
+    private let mapVC = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
+    private let listVC = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
