@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042CD91A24F4C49800ADFCB5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD91924F4C49800ADFCB5 /* Login.storyboard */; };
+		042CD92424F4C4EB00ADFCB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD91C24F4C4EB00ADFCB5 /* SearchViewController.swift */; };
+		042CD92524F4C4EB00ADFCB5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD91D24F4C4EB00ADFCB5 /* Search.storyboard */; };
+		042CD92624F4C4EB00ADFCB5 /* SearchResultsMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD91F24F4C4EB00ADFCB5 /* SearchResultsMap.storyboard */; };
+		042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD92024F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift */; };
+		042CD92824F4C4EB00ADFCB5 /* SearchResultsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD92224F4C4EB00ADFCB5 /* SearchResultsListViewController.swift */; };
+		042CD92924F4C4EB00ADFCB5 /* SearchResultsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD92324F4C4EB00ADFCB5 /* SearchResultsList.storyboard */; };
+		042CD92C24F4C66400ADFCB5 /* FavoriteTrucks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD92B24F4C66400ADFCB5 /* FavoriteTrucks.storyboard */; };
+		042CD92F24F4C69900ADFCB5 /* FavoriteTrucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD92E24F4C69900ADFCB5 /* FavoriteTrucksViewController.swift */; };
+		042CD93124F4C6DA00ADFCB5 /* MyTrucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD93024F4C6DA00ADFCB5 /* MyTrucksViewController.swift */; };
+		042CD93424F4C6FA00ADFCB5 /* MyTrucks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD93324F4C6FA00ADFCB5 /* MyTrucks.storyboard */; };
+		042CD93624F4C9C500ADFCB5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD93524F4C9C500ADFCB5 /* MainTabBarController.swift */; };
+		042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD93B24F4CC7300ADFCB5 /* TruckDetailViewController.swift */; };
+		042CD93F24F4CF7000ADFCB5 /* TruckDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD93E24F4CF7000ADFCB5 /* TruckDetail.storyboard */; };
 		51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */; };
 		51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */; };
-		51D93BBE24EE1C01009FC1A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BBD24EE1C01009FC1A4 /* ViewController.swift */; };
 		51D93BC124EE1C01009FC1A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D93BBF24EE1C01009FC1A4 /* Main.storyboard */; };
 		51D93BC324EE1C02009FC1A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D93BC224EE1C02009FC1A4 /* Assets.xcassets */; };
 		51D93BC624EE1C02009FC1A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D93BC424EE1C02009FC1A4 /* LaunchScreen.storyboard */; };
@@ -40,6 +53,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042CD91924F4C49800ADFCB5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		042CD91C24F4C4EB00ADFCB5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		042CD91D24F4C4EB00ADFCB5 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		042CD91F24F4C4EB00ADFCB5 /* SearchResultsMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResultsMap.storyboard; sourceTree = "<group>"; };
+		042CD92024F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsMapViewController.swift; sourceTree = "<group>"; };
+		042CD92224F4C4EB00ADFCB5 /* SearchResultsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsListViewController.swift; sourceTree = "<group>"; };
+		042CD92324F4C4EB00ADFCB5 /* SearchResultsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResultsList.storyboard; sourceTree = "<group>"; };
+		042CD92B24F4C66400ADFCB5 /* FavoriteTrucks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteTrucks.storyboard; sourceTree = "<group>"; };
+		042CD92E24F4C69900ADFCB5 /* FavoriteTrucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTrucksViewController.swift; sourceTree = "<group>"; };
+		042CD93024F4C6DA00ADFCB5 /* MyTrucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrucksViewController.swift; sourceTree = "<group>"; };
+		042CD93324F4C6FA00ADFCB5 /* MyTrucks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTrucks.storyboard; sourceTree = "<group>"; };
+		042CD93524F4C9C500ADFCB5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		042CD93B24F4CC7300ADFCB5 /* TruckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckDetailViewController.swift; sourceTree = "<group>"; };
+		042CD93E24F4CF7000ADFCB5 /* TruckDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TruckDetail.storyboard; sourceTree = "<group>"; };
 		067E8D58DAEAB9C008A63112 /* Pods-FoodTruckTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker.release.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker.release.xcconfig"; sourceTree = "<group>"; };
 		1134341206100CD3EB552737 /* Pods-FoodTruckTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C4620CE0F4EE2356D504324 /* Pods-FoodTruckTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,7 +74,6 @@
 		51D93BB624EE1C01009FC1A4 /* FoodTruckTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		51D93BBD24EE1C01009FC1A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51D93BC024EE1C01009FC1A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51D93BC224EE1C02009FC1A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51D93BC524EE1C02009FC1A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +121,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042CD91B24F4C4EB00ADFCB5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				042CD91D24F4C4EB00ADFCB5 /* Search.storyboard */,
+				042CD91C24F4C4EB00ADFCB5 /* SearchViewController.swift */,
+				042CD91E24F4C4EB00ADFCB5 /* Map */,
+				042CD92124F4C4EB00ADFCB5 /* List */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		042CD91E24F4C4EB00ADFCB5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				042CD91F24F4C4EB00ADFCB5 /* SearchResultsMap.storyboard */,
+				042CD92024F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		042CD92124F4C4EB00ADFCB5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				042CD92324F4C4EB00ADFCB5 /* SearchResultsList.storyboard */,
+				042CD92224F4C4EB00ADFCB5 /* SearchResultsListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		042CD92A24F4C4F900ADFCB5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				042CD91924F4C49800ADFCB5 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		042CD92D24F4C68400ADFCB5 /* FavoriteTrucks */ = {
+			isa = PBXGroup;
+			children = (
+				042CD92B24F4C66400ADFCB5 /* FavoriteTrucks.storyboard */,
+				042CD92E24F4C69900ADFCB5 /* FavoriteTrucksViewController.swift */,
+			);
+			path = FavoriteTrucks;
+			sourceTree = "<group>";
+		};
+		042CD93224F4C6E400ADFCB5 /* MyTrucks */ = {
+			isa = PBXGroup;
+			children = (
+				042CD93024F4C6DA00ADFCB5 /* MyTrucksViewController.swift */,
+				042CD93324F4C6FA00ADFCB5 /* MyTrucks.storyboard */,
+			);
+			path = MyTrucks;
+			sourceTree = "<group>";
+		};
+		042CD93724F4CAE500ADFCB5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */,
+				51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */,
+				51D93BC224EE1C02009FC1A4 /* Assets.xcassets */,
+				51D93BC424EE1C02009FC1A4 /* LaunchScreen.storyboard */,
+				51D93BC724EE1C02009FC1A4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		042CD93824F4CB1700ADFCB5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				51D93BBF24EE1C01009FC1A4 /* Main.storyboard */,
+				042CD93524F4C9C500ADFCB5 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		042CD93D24F4CC7800ADFCB5 /* TruckDetail */ = {
+			isa = PBXGroup;
+			children = (
+				042CD93B24F4CC7300ADFCB5 /* TruckDetailViewController.swift */,
+				042CD93E24F4CF7000ADFCB5 /* TruckDetail.storyboard */,
+			);
+			path = TruckDetail;
+			sourceTree = "<group>";
+		};
 		2CA071EFFBB53158711D14EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +222,6 @@
 		51D93BAD24EE1C01009FC1A4 = {
 			isa = PBXGroup;
 			children = (
-				51D93BEA24EF5A71009FC1A4 /* CoreData */,
 				51D93BB824EE1C01009FC1A4 /* FoodTruckTracker */,
 				51D93BCF24EE1C02009FC1A4 /* FoodTruckTrackerTests */,
 				51D93BDA24EE1C02009FC1A4 /* FoodTruckTrackerUITests */,
@@ -134,13 +244,14 @@
 		51D93BB824EE1C01009FC1A4 /* FoodTruckTracker */ = {
 			isa = PBXGroup;
 			children = (
-				51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */,
-				51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */,
-				51D93BBD24EE1C01009FC1A4 /* ViewController.swift */,
-				51D93BBF24EE1C01009FC1A4 /* Main.storyboard */,
-				51D93BC224EE1C02009FC1A4 /* Assets.xcassets */,
-				51D93BC424EE1C02009FC1A4 /* LaunchScreen.storyboard */,
-				51D93BC724EE1C02009FC1A4 /* Info.plist */,
+				042CD93D24F4CC7800ADFCB5 /* TruckDetail */,
+				042CD93724F4CAE500ADFCB5 /* App */,
+				51D93BEA24EF5A71009FC1A4 /* CoreData */,
+				042CD92A24F4C4F900ADFCB5 /* Login */,
+				042CD93824F4CB1700ADFCB5 /* TabBar */,
+				042CD91B24F4C4EB00ADFCB5 /* Search */,
+				042CD92D24F4C68400ADFCB5 /* FavoriteTrucks */,
+				042CD93224F4C6E400ADFCB5 /* MyTrucks */,
 			);
 			path = FoodTruckTracker;
 			sourceTree = "<group>";
@@ -290,9 +401,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042CD91A24F4C49800ADFCB5 /* Login.storyboard in Resources */,
+				042CD92924F4C4EB00ADFCB5 /* SearchResultsList.storyboard in Resources */,
 				51D93BC624EE1C02009FC1A4 /* LaunchScreen.storyboard in Resources */,
 				51D93BC324EE1C02009FC1A4 /* Assets.xcassets in Resources */,
 				51D93BC124EE1C01009FC1A4 /* Main.storyboard in Resources */,
+				042CD93424F4C6FA00ADFCB5 /* MyTrucks.storyboard in Resources */,
+				042CD92524F4C4EB00ADFCB5 /* Search.storyboard in Resources */,
+				042CD93F24F4CF7000ADFCB5 /* TruckDetail.storyboard in Resources */,
+				042CD92C24F4C66400ADFCB5 /* FavoriteTrucks.storyboard in Resources */,
+				042CD92624F4C4EB00ADFCB5 /* SearchResultsMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,11 +521,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */,
+				042CD92424F4C4EB00ADFCB5 /* SearchViewController.swift in Sources */,
 				51D93BEF24EF5B3E009FC1A4 /* CoreDataStack.swift in Sources */,
+				042CD93624F4C9C500ADFCB5 /* MainTabBarController.swift in Sources */,
 				51D93BED24EF5B29009FC1A4 /* FTTData.xcdatamodeld in Sources */,
-				51D93BBE24EE1C01009FC1A4 /* ViewController.swift in Sources */,
+				042CD92F24F4C69900ADFCB5 /* FavoriteTrucksViewController.swift in Sources */,
+				042CD93124F4C6DA00ADFCB5 /* MyTrucksViewController.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,
+				042CD92824F4C4EB00ADFCB5 /* SearchResultsListViewController.swift in Sources */,
+				042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMX25T49H2;
-				INFOPLIST_FILE = FoodTruckTracker/Info.plist;
+				INFOPLIST_FILE = FoodTruckTracker/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,7 +726,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMX25T49H2;
-				INFOPLIST_FILE = FoodTruckTracker/Info.plist;
+				INFOPLIST_FILE = FoodTruckTracker/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
