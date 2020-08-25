@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Operator+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Operator+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Menu+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Menu+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Diner+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Diner+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Truck+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/baseblade/FoodTruckBuildWeek/ios/FoodTruckTracker/CoreData/Truck+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:FoodTruckTracker.xcodeproj">
    </FileRef>
    <FileRef

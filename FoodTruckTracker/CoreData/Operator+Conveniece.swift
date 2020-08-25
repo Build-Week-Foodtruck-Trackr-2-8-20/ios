@@ -12,14 +12,10 @@ import CoreData
 extension Operator {
 
     @discardableResult convenience init(email: String,
-                                        trucksOwned: String,
-                                        password: String,
                                         username: String,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.email = email
-        self.trucksOwned = trucksOwned
-        self.password = password
         self.username = username
     }
 }

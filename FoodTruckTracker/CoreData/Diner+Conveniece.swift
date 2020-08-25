@@ -15,7 +15,6 @@ extension Diner {
                                         currentLongitude: Double,
                                         email: String,
                                         favoriteTrucks: String,
-                                        password: String,
                                         username: String,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
@@ -23,7 +22,6 @@ extension Diner {
         self.currentLongitude = currentLongitude
         self.email = email
         self.favoriteTrucks = favoriteTrucks
-        self.password = password
         self.username = username
     }
 }

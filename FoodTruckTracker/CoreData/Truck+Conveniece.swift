@@ -12,6 +12,7 @@ import CoreData
 extension Truck {
 
     @discardableResult convenience init(cuisineType: String,
+                                        truckName: String,
                                         customerRating: Int16,
                                         customerRatingAvg: Int16,
                                         departureTime: Date = Date(),
@@ -20,6 +21,7 @@ extension Truck {
                                         truckLongitude: Double,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
+        self.truckName = truckName
         self.cuisineType = cuisineType
         self.customerRating = customerRating
         self.customerRatingAvg = customerRatingAvg
