@@ -6,7 +6,6 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="favoriteTrucks" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
-        <attribute name="role" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Menu" representedClassName="Menu" syncable="YES" codeGenerationType="class">
@@ -38,9 +37,9 @@
         <relationship name="operator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Operator" inverseName="truck" inverseEntity="Operator"/>
     </entity>
     <elements>
-        <element name="Diner" positionX="-334.48046875" positionY="-214.1875" width="128" height="148"/>
+        <element name="Diner" positionX="-334.48046875" positionY="-214.1875" width="128" height="133"/>
+        <element name="Menu" positionX="124.48828125" positionY="-204.4140625" width="128" height="148"/>
         <element name="Operator" positionX="-181.98828125" positionY="-207.859375" width="128" height="133"/>
         <element name="Truck" positionX="-27.01953125" positionY="-208.703125" width="128" height="178"/>
-        <element name="Menu" positionX="124.48828125" positionY="-204.4140625" width="128" height="148"/>
     </elements>
 </model>
