@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    @IBOutlet var resultsContainer: UIView!
+    @IBOutlet private var resultsContainer: UIView!
     
     let mapVC = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
     let listVC = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
@@ -47,11 +47,13 @@ class SearchViewController: UIViewController {
             destinationVC = listVC
         }
         
-        transition(from: currentVC, to: destinationVC, duration: 1.0, options: .transitionFlipFromLeft, animations: {
-            //
-        }) { finished in
-            
-        }
+        transition(
+            from: currentVC,
+            to: destinationVC,
+            duration: 1.0,
+            options: .transitionFlipFromLeft,
+            animations: nil,
+            completion: nil
+        )
     }
 }
-
