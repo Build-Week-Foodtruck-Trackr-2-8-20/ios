@@ -25,32 +25,20 @@ class SearchResultsMapViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    /// Updates the annotations displayed by the mapView.
-    /// Only deletes and adds annotations that have changed.
-    private var displayedAnnotations: [MKAnnotation]? {
+    /// Updates the truck annotations displayed by the mapView.
+    /// Only deletes and adds trucks that have changed.
+    private var displayedTrucks: [Truck] = [] {
         willSet {
-            if let currentAnnotations = displayedAnnotations {
-                if let newAnnotations = newValue {
-                    let annotationsToRemove = currentAnnotations.filter { annotation in
-                        !newAnnotations.contains { $0 === annotation }
-                    }
-                    mapView.removeAnnotations(annotationsToRemove)
-                } else {
-                    mapView.removeAnnotations(currentAnnotations)
-                }
+            let annotationsToRemove = displayedTrucks.filter { truck in
+                !newValue.contains(truck)
             }
+            mapView.removeAnnotations(annotationsToRemove)
         }
         didSet {
-            if let newAnnotations = displayedAnnotations {
-                if let oldAnnotations = oldValue {
-                    let annotationsToAdd = newAnnotations.filter { annotation in
-                        !oldAnnotations.contains { $0 === annotation }
-                    }
-                    mapView.addAnnotations(annotationsToAdd)
-                } else {
-                    mapView.addAnnotations(newAnnotations)
-                }
+            let annotationsToAdd = displayedTrucks.filter { truck in
+                !oldValue.contains(truck)
             }
+            mapView.addAnnotations(annotationsToAdd)
         }
     }
     
@@ -64,7 +52,8 @@ class SearchResultsMapViewController: UIViewController {
     
     /// Reloads map with current annotations from the FRC
     func reloadData() {
-        displayedAnnotations = fetchedResultsController?.fetchedObjects
+        guard let trucks = fetchedResultsController?.fetchedObjects else { return }
+        displayedTrucks = trucks
     }
     
     // MARK: - Testing Buttons
@@ -111,17 +100,21 @@ extension SearchResultsMapViewController: NSFetchedResultsControllerDelegate {
                     newIndexPath: IndexPath?) {
         
         guard let truck = anObject as? Truck else { return }
-        
+    
         switch type {
         case .insert:
-            mapView.addAnnotation(truck)
+            displayedTrucks.append(truck)
         case .update:
-            mapView.removeAnnotation(truck)
-            mapView.addAnnotation(truck)
+            if let index = displayedTrucks.firstIndex(of: truck) {
+                displayedTrucks.remove(at: index)
+                displayedTrucks.append(truck)
+            }
         case .move:
             break
         case .delete:
-            mapView.removeAnnotation(truck)
+            if let index = displayedTrucks.firstIndex(of: truck) {
+                displayedTrucks.remove(at: index)
+            }
         @unknown default:
             break
         }
