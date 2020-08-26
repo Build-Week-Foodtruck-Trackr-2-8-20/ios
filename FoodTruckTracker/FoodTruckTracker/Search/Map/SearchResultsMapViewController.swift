@@ -76,7 +76,10 @@ class SearchResultsMapViewController: UIViewController {
                   truckName: "WHATABURGER",
                   customerRating: 5,
                   customerRatingAvg: 5,
-                  imageOfTruck: "https://www.kltv.com/resizer/or5mqVfPSUFp92P-ZnRxmQ5btds=/1200x600/cloudfront-us-east-1.images.arcpublishing.com/raycom/MR4RBHVK3JBSZOUZFXHVIFZAJY.jpeg",
+                  imageOfTruck: """
+                  https://www.kltv.com/resizer/or5mqVfPSUFp92P-ZnRxmQ5btds=/1200x600/cloudfront-us-east-1.\
+                  images.arcpublishing.com/raycom/MR4RBHVK3JBSZOUZFXHVIFZAJY.jpeg
+                  """,
                   truckLatitude: lat,
                   truckLongitude: lon)
         }
