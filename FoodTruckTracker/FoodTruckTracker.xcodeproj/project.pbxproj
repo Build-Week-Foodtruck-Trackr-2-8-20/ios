@@ -44,6 +44,7 @@
 		60A080282EFC4E043ADEAD9A /* Pods_FoodTruckTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */; };
 		B15DC9239E331808574B2B93 /* Pods_FoodTruckTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303162DB83EEEBDB370A10BF /* Pods_FoodTruckTrackerTests.framework */; };
 		E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D64A24F5FBCD0082374F /* MyTrucksTableViewController.swift */; };
+		E1620C0124F5FBA0007F00AC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1620C0024F5FBA0007F00AC /* APIController.swift */; };
 		F15ADC7FA9FF140063D711D1 /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA8B1663F5F30EF79D8032D /* Pods_FoodTruckTracker_FoodTruckTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTruckTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89ADC8A7D1102BDFBE28662 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D5D64A24F5FBCD0082374F /* MyTrucksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrucksTableViewController.swift; sourceTree = "<group>"; };
+		E1620C0024F5FBA0007F00AC /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		EF06AAF406FB457FDEC28EC1 /* Pods-FoodTruckTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker.debug.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				042CD91924F4C49800ADFCB5 /* Login.storyboard */,
+				E1620C0024F5FBA0007F00AC /* APIController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,
 				042CD92824F4C4EB00ADFCB5 /* SearchResultsListViewController.swift in Sources */,
+				E1620C0124F5FBA0007F00AC /* APIController.swift in Sources */,
 				042CD95824F4DAB700ADFCB5 /* Menu+CoreDataClass.swift in Sources */,
 				042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */,
 				042CD94F24F4DAB700ADFCB5 /* Truck+CoreDataClass.swift in Sources */,
