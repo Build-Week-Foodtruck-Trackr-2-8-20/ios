@@ -25,6 +25,8 @@ class SearchResultsMapViewController: UIViewController {
     
     // MARK: - Private Properties
     
+    /// Updates the annotations displayed by the mapView.
+    /// Only deletes and adds annotations that have changed.
     private var displayedAnnotations: [MKAnnotation]? {
         willSet {
             if let currentAnnotations = displayedAnnotations {
@@ -60,6 +62,7 @@ class SearchResultsMapViewController: UIViewController {
     
     // MARK: - Public Methods
     
+    /// Reloads map with current annotations from the FRC
     func reloadData() {
         displayedAnnotations = fetchedResultsController?.fetchedObjects
     }

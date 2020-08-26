@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     
     private let mapVC: SearchResultsMapViewController = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
     private let listVC: SearchResultsListViewController = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
+    
     private var currentResultsVC: SearchResultsViewController?
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Truck> = {
@@ -63,6 +64,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - IBActions
     
+    /// Swaps between the map and list results VCs with a flip transition
     @IBAction func swapViews(_ sender: UIBarButtonItem) {
         guard let currentVC = currentResultsVC else { return }
         let destinationVC: SearchResultsViewController
@@ -111,6 +113,7 @@ extension SearchViewController: UISearchResultsUpdating {
 
 // MARK: - Search Results View Controller Protocol
 
+/// Interface for common functionality of child view controllers that display search results
 protocol SearchResultsViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var fetchedResultsController: NSFetchedResultsController<Truck>? { get set }
     
