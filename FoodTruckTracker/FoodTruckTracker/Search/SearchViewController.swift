@@ -17,7 +17,10 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addChildren()
+    }
+    
+    func addChildren() {
         addChild(listVC)
         resultsContainer.addSubview(listVC.view)
         listVC.didMove(toParent: self)
@@ -25,6 +28,7 @@ class SearchViewController: UIViewController {
         
         addChild(mapVC)
         mapVC.didMove(toParent: self)
+        mapVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
     /*
