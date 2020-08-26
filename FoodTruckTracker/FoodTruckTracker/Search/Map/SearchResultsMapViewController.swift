@@ -11,41 +11,60 @@ import MapKit
 import UIKit
 
 class SearchResultsMapViewController: UIViewController {
+    // MARK: - Public Properties
+    
+    var fetchedResultsController: NSFetchedResultsController<Truck>? {
+        didSet {
+            reloadData()
+        }
+    }
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet private var mapView: MKMapView!
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Truck> = {
-        let request: NSFetchRequest<Truck> = Truck.fetchRequest()
-        request.sortDescriptors = [
-            .init(key: "truckName", ascending: true),
-        ]
-        let context = CoreDataStack.shared.mainContext
-        
-        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
-        frc.delegate = self
-        try? frc.performFetch()
-        
-        return frc
-    }()
+    // MARK: - Private Properties
     
     private var displayedAnnotations: [MKAnnotation]? {
         willSet {
             if let currentAnnotations = displayedAnnotations {
-                mapView.removeAnnotations(currentAnnotations)
+                if let newAnnotations = newValue {
+                    let annotationsToRemove = currentAnnotations.filter { annotation in
+                        !newAnnotations.contains { $0 === annotation }
+                    }
+                    mapView.removeAnnotations(annotationsToRemove)
+                } else {
+                    mapView.removeAnnotations(currentAnnotations)
+                }
             }
         }
         didSet {
             if let newAnnotations = displayedAnnotations {
-                mapView.addAnnotations(newAnnotations)
+                if let oldAnnotations = oldValue {
+                    let annotationsToAdd = newAnnotations.filter { annotation in
+                        !oldAnnotations.contains { $0 === annotation }
+                    }
+                    mapView.addAnnotations(annotationsToAdd)
+                } else {
+                    mapView.addAnnotations(newAnnotations)
+                }
             }
         }
     }
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayedAnnotations = fetchedResultsController.fetchedObjects
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Public Methods
+    
+    func reloadData() {
+        displayedAnnotations = fetchedResultsController?.fetchedObjects
+    }
+    
+    // MARK: - Testing Buttons
     
     /// Adds 50 trucks to core data for testing
     @IBAction func seedTrucks(_ sender: UIButton) {
@@ -67,7 +86,7 @@ class SearchResultsMapViewController: UIViewController {
     
     /// Removes all currently fetched trucks from core data
     @IBAction func deleteTrucks(_ sender: UIButton) {
-        guard let trucks = fetchedResultsController.fetchedObjects else { return }
+        guard let trucks = fetchedResultsController?.fetchedObjects else { return }
         
         for truck in trucks {
             CoreDataStack.shared.mainContext.delete(truck)
@@ -103,6 +122,7 @@ extension SearchResultsMapViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
+// MARK: - Truck MKAnnotation Conformance
 
 extension Truck: MKAnnotation {
     /// Provides a `CLLocationCoordinate2D` based on a truck's latitude and longitude

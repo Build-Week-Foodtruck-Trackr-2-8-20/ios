@@ -6,44 +6,66 @@
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 class SearchViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private var resultsContainer: UIView!
     
-    private let mapVC = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
-    private let listVC = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
+    // MARK: - Private Properties
+    
+    private let mapVC: SearchResultsMapViewController = UIStoryboard(name: "SearchResultsMap", bundle: .main).instantiateInitialViewController()!
+    private let listVC: SearchResultsListViewController = UIStoryboard(name: "SearchResultsList", bundle: .main).instantiateInitialViewController()!
+    private var currentResultsVC: SearchResultsViewController?
+    
+    private lazy var fetchedResultsController: NSFetchedResultsController<Truck> = {
+        let request: NSFetchRequest<Truck> = Truck.fetchRequest()
+        request.sortDescriptors = [
+            .init(key: "truckName", ascending: true),
+        ]
+        
+        let context = CoreDataStack.shared.mainContext
+
+        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        frc.delegate = mapVC
+        try? frc.performFetch()
+        
+        return frc
+    }()
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addChildren()
+        navigationItem.searchController = UISearchController()
+        navigationItem.searchController?.searchResultsUpdater = self
+        navigationItem.searchController?.obscuresBackgroundDuringPresentation = false
     }
     
-    func addChildren() {
+    // MARK: - Private Methods
+    
+    private func addChildren() {
         addChild(listVC)
         resultsContainer.addSubview(listVC.view)
         listVC.didMove(toParent: self)
         listVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        currentResultsVC = listVC
         
         addChild(mapVC)
         mapVC.didMove(toParent: self)
         mapVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - IBActions
     
     @IBAction func swapViews(_ sender: UIBarButtonItem) {
-        let currentVC = listVC.view.isDescendant(of: view) ? listVC : mapVC
-        let destinationVC: UIViewController
+        guard let currentVC = currentResultsVC else { return }
+        let destinationVC: SearchResultsViewController
             
         if currentVC === listVC {
             sender.title = "List"
@@ -53,6 +75,9 @@ class SearchViewController: UIViewController {
             destinationVC = listVC
         }
         
+        fetchedResultsController.delegate = destinationVC
+        destinationVC.fetchedResultsController = fetchedResultsController
+        
         transition(
             from: currentVC,
             to: destinationVC,
@@ -61,5 +86,35 @@ class SearchViewController: UIViewController {
             animations: nil,
             completion: nil
         )
+        
+        self.currentResultsVC = destinationVC
     }
 }
+
+// MARK: - Search Results Updating
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        if searchText.isEmpty {
+            fetchedResultsController.fetchRequest.predicate = nil
+        } else {
+            fetchedResultsController.fetchRequest.predicate =
+            NSPredicate(format: "truckName BEGINSWITH[cd] %@", searchText)
+        }
+    
+        try? fetchedResultsController.performFetch()
+        currentResultsVC?.reloadData()
+    }
+}
+
+// MARK: - Search Results View Controller Protocol
+
+protocol SearchResultsViewController: UIViewController, NSFetchedResultsControllerDelegate {
+    var fetchedResultsController: NSFetchedResultsController<Truck>? { get set }
+    
+    func reloadData()
+}
+extension SearchResultsListViewController: SearchResultsViewController {}
+extension SearchResultsMapViewController: SearchResultsViewController {}
