@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3JD-yW-gdT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="ppb-Gf-ajc">
+            <objects>
+                <tabBarController id="3JD-yW-gdT" customClass="MainTabBarController" customModule="FoodTruckTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gHw-pq-Qyh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Yu-6J-aqQ" kind="relationship" relationship="viewControllers" id="Vf0-Yu-gFu"/>
+                        <segue destination="Ay5-SI-IKs" kind="relationship" relationship="viewControllers" id="NoK-6d-XKE"/>
+                        <segue destination="pVk-mK-AaP" kind="relationship" relationship="viewControllers" id="G6F-vm-WAt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMN-Uf-nMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1413" y="246"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="45R-NL-Vcp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="3Yu-6J-aqQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2xx-x1-bzK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTQ-wq-25V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="64"/>
+        </scene>
+        <!--FavoriteTrucks-->
+        <scene sceneID="CHO-re-oEs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavoriteTrucks" id="Ay5-SI-IKs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qxg-9d-fWa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LfR-63-kvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="246"/>
+        </scene>
+        <!--MyTrucks-->
+        <scene sceneID="rV2-1J-21g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyTrucks" id="pVk-mK-AaP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YiN-1R-yRj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fo-83-aWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760" y="422"/>
+        </scene>
+    </scenes>
+</document>
