@@ -1,5 +1,5 @@
 //
-//  MyTrucksViewController.swift
+//  TruckDetailViewController.swift
 //  FoodTruckTracker
 //
 //  Created by Shawn Gee on 8/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyTrucksViewController: UIViewController {
+class TruckDetailViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,12 @@ class MyTrucksViewController: UIViewController {
     }
     
 
+    //MARK: - IBOutlets -
+    @IBOutlet weak var aboutTextField: UITextField!
+    @IBOutlet weak var hoursOfOperationTextField: UITextField!
+    @IBOutlet weak var cuisineTypeTextField: UITextField!
+    @IBOutlet weak var truckNameTextField: UITextField!
+    @IBOutlet weak var truckImageView: UIImageView!
     /*
     // MARK: - Navigation
 
