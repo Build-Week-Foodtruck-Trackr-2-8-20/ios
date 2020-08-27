@@ -46,6 +46,13 @@ class SearchResultsMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.register(
+            MKMarkerAnnotationView.self,
+            forAnnotationViewWithReuseIdentifier: NSStringFromClass(Truck.self)
+        )
+        
+        mapView.delegate = self
     }
     
     // MARK: - Public Methods
@@ -58,9 +65,9 @@ class SearchResultsMapViewController: UIViewController {
     
     // MARK: - Testing Buttons
     
-    /// Adds 50 trucks to core data for testing
+    /// Adds 20 trucks to core data for testing
     @IBAction func seedTrucks(_ sender: UIButton) {
-        for i in 0..<50 {
+        for i in 0..<20 {
                 let lat = Double.random(in: 32 ... 34)
                 let lon = Double.random(in: -82 ... -80)
                 Truck(cuisineType: "American",
@@ -117,6 +124,45 @@ extension SearchResultsMapViewController: NSFetchedResultsControllerDelegate {
         @unknown default:
             break
         }
+    }
+}
+
+extension SearchResultsMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let truck = annotation as? Truck else {
+            fatalError("Only Trucks are supported as annotations at this time")
+        }
+        
+        guard let annotationView = mapView.dequeueReusableAnnotationView(
+            withIdentifier: NSStringFromClass(Truck.self),
+            for: annotation) as? MKMarkerAnnotationView else {
+                fatalError("Unable to cast annotationView as \(MKMarkerAnnotationView.self)")
+        }
+        
+        annotationView.glyphImage = UIImage(named: "Truck")
+        annotationView.markerTintColor = .systemOrange
+        annotationView.canShowCallout = true
+        
+        let calloutView = CalloutView(frame: .zero)
+        calloutView.truck = truck
+        annotationView.detailCalloutAccessoryView = calloutView
+        
+        let rightButton = UIButton(type: .detailDisclosure)
+        rightButton.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
+        annotationView.rightCalloutAccessoryView = rightButton
+        
+        return annotationView
+    }
+    
+    @objc func showDetail() {
+        performSegue(withIdentifier: "ShowTruckDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let truck = mapView.selectedAnnotations.first as? Truck else {
+            return
+        }
+        // Pass on truck to detail vc
     }
 }
 
