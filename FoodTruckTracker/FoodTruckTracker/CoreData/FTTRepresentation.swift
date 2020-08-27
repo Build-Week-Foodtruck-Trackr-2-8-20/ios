@@ -15,12 +15,10 @@ struct FTTRepresentation: Codable {
     var itemName: String
     var itemPhotos: String
     var itemPrice: Double
-    var email: String
-    var username: String
-    var favoriteTrucks: String
     var cuisineType: String
     var departureTime: Date
     var imageOfTruck: String
+    var truckId: Int16
 
     enum CodingKeys: String, CodingKey {
         case customerRatingAvg
@@ -29,12 +27,9 @@ struct FTTRepresentation: Codable {
         case itemName
         case itemPhotos = "photoURL"
         case itemPrice
-        case email
-        case username
-        case favoriteTrucks = "userid"
         case cuisineType
         case departureTime
         case imageOfTruck = "imageURL"
-
+        case truckId = "id"
     }
 }
