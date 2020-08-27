@@ -19,6 +19,7 @@ extension Truck {
                                         imageOfTruck: String,
                                         truckLatitude: Double,
                                         truckLongitude: Double,
+                                        truckId: Int,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.truckName = truckName
@@ -29,5 +30,6 @@ extension Truck {
         self.imageOfTruck = imageOfTruck
         self.truckLatitude = truckLatitude
         self.truckLongitude = truckLongitude
+        self.truckId = Int16(truckId)
     }
 }

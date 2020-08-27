@@ -1,78 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pg7-x7-ynR">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-    </dependencies>
-    <scenes>
-        <!--Favorite Trucks View Controller-->
-        <scene sceneID="QyE-xR-uf8">
-            <objects>
-                <viewController id="hgI-6H-3PY" customClass="FavoriteTrucksViewController" customModule="FoodTruckTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TzU-27-UsI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite Trucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-xn-AEn">
-                                <rect key="frame" x="186" y="359" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-MT-SYz">
-                                <rect key="frame" x="38" y="670" width="189" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click on truck to view detail"/>
-                                <connections>
-                                    <segue destination="Lal-BA-9yh" kind="show" id="b7h-ak-Die"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="2bc-cq-eUE"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nGR-aQ-N4C"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UZ1-bQ-RHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1960.8695652173915" y="142.63392857142856"/>
-        </scene>
-        <!--TruckDetail-->
-        <scene sceneID="EEG-WQ-eZM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TruckDetail" id="Lal-BA-9yh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KOE-TW-yIS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="plx-id-MqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2610.144927536232" y="135.9375"/>
-        </scene>
-        <!--Favorite Trucks-->
-        <scene sceneID="Urx-yU-fYF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pg7-x7-ynR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite Trucks" image="heart.fill" catalog="system" id="f0G-Es-ref"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UrT-AE-POY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="hgI-6H-3PY" kind="relationship" relationship="rootViewController" id="o4N-Ob-Owf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9HY-nb-D3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="142.63392857142856"/>
-        </scene>
-    </scenes>
-    <resources>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
-    </resources>
+	<device id="retina6_1" orientation="portrait" appearance="light"/>
+	<dependencies>
+		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+		<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+	</dependencies>
+	<scenes>
+		<!--Table View Controller-->
+		<scene sceneID="Vte-jM-KgM">
+			<objects>
+				<tableViewController id="GpY-5u-jZo" sceneMemberID="viewController">
+					<tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9yn-UI-qPD">
+						<rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+						<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+						<color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+						<prototypes>
+							<tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="eAb-wB-bJp">
+								<rect key="frame" x="0.0" y="28" width="414" height="108"/>
+								<autoresizingMask key="autoresizingMask"/>
+								<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAb-wB-bJp" id="52H-UD-H4L">
+									<rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+									<autoresizingMask key="autoresizingMask"/>
+									<subviews>
+										<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJj-sy-YUO">
+											<rect key="frame" x="20" y="11" width="67" height="34"/>
+											<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+											<fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+											<nil key="textColor"/>
+											<nil key="highlightedColor"/>
+										</label>
+										<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhX-FU-1Mu">
+											<rect key="frame" x="20" y="46" width="48" height="24"/>
+											<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+											<fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+											<nil key="textColor"/>
+											<nil key="highlightedColor"/>
+										</label>
+										<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours of operation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4B-Rt-TCj">
+											<rect key="frame" x="232" y="11" width="162" height="24"/>
+											<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+											<fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+											<nil key="textColor"/>
+											<nil key="highlightedColor"/>
+										</label>
+										<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-5i-kqz">
+											<rect key="frame" x="232" y="43" width="48" height="24"/>
+											<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+											<fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+											<nil key="textColor"/>
+											<nil key="highlightedColor"/>
+										</label>
+										<stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xzT-cZ-7iI">
+											<rect key="frame" x="20" y="75" width="126" height="22"/>
+											<subviews>
+												<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4k-II-u9q">
+													<rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+													<state key="normal" image="star" catalog="system"/>
+												</button>
+												<button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-lV-aV4">
+													<rect key="frame" x="26" y="0.0" width="22" height="22"/>
+													<state key="normal" image="star" catalog="system"/>
+												</button>
+												<button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyd-je-jEI">
+													<rect key="frame" x="52" y="0.0" width="22" height="22"/>
+													<state key="normal" image="star" catalog="system"/>
+												</button>
+												<button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w60-Yo-lxi">
+													<rect key="frame" x="78" y="0.0" width="22" height="22"/>
+													<state key="normal" image="star" catalog="system"/>
+												</button>
+												<button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeJ-2u-GYh">
+													<rect key="frame" x="104" y="0.0" width="22" height="22"/>
+													<state key="normal" image="star" catalog="system"/>
+												</button>
+											</subviews>
+										</stackView>
+									</subviews>
+								</tableViewCellContentView>
+								<connections>
+									<segue destination="Lal-BA-9yh" kind="show" identifier="TruckDetail" id="cGX-al-fFd"/>
+								</connections>
+							</tableViewCell>
+						</prototypes>
+						<connections>
+							<outlet property="dataSource" destination="GpY-5u-jZo" id="c43-vD-7g3"/>
+							<outlet property="delegate" destination="GpY-5u-jZo" id="ed4-p2-wSv"/>
+						</connections>
+					</tableView>
+					<navigationItem key="navigationItem" id="ejE-Ow-QwR"/>
+				</tableViewController>
+				<placeholder placeholderIdentifier="IBFirstResponder" id="xWY-Q2-W7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+			</objects>
+			<point key="canvasLocation" x="1853.6231884057972" y="142.63392857142856"/>
+		</scene>
+		<!--TruckDetail-->
+		<scene sceneID="EEG-WQ-eZM">
+			<objects>
+				<viewControllerPlaceholder storyboardName="TruckDetail" id="Lal-BA-9yh" sceneMemberID="viewController">
+					<navigationItem key="navigationItem" id="KOE-TW-yIS"/>
+				</viewControllerPlaceholder>
+				<placeholder placeholderIdentifier="IBFirstResponder" id="plx-id-MqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+			</objects>
+			<point key="canvasLocation" x="2610.144927536232" y="135.9375"/>
+		</scene>
+		<!--Favorite Trucks-->
+		<scene sceneID="Urx-yU-fYF">
+			<objects>
+				<navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pg7-x7-ynR" sceneMemberID="viewController">
+					<tabBarItem key="tabBarItem" title="Favorite Trucks" image="heart.fill" catalog="system" id="f0G-Es-ref"/>
+					<toolbarItems/>
+					<simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+					<navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UrT-AE-POY">
+						<rect key="frame" x="0.0" y="44" width="414" height="44"/>
+						<autoresizingMask key="autoresizingMask"/>
+					</navigationBar>
+					<nil name="viewControllers"/>
+					<connections>
+						<segue destination="GpY-5u-jZo" kind="relationship" relationship="rootViewController" id="fxl-ac-y6q"/>
+					</connections>
+				</navigationController>
+				<placeholder placeholderIdentifier="IBFirstResponder" id="9HY-nb-D3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+			</objects>
+			<point key="canvasLocation" x="1050.7246376811595" y="142.63392857142856"/>
+		</scene>
+	</scenes>
+	<resources>
+		<image name="heart.fill" catalog="system" width="128" height="109"/>
+		<image name="star" catalog="system" width="128" height="116"/>
+	</resources>
 </document>

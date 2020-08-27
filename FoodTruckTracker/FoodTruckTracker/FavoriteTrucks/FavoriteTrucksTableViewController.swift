@@ -1,17 +1,15 @@
 //
-//  MenuTableViewController.swift
+//  FavoriteTrucksTableViewController.swift
 //  FoodTruckTracker
 //
-//  Created by Rob Vance on 8/25/20.
+//  Created by Josh Kocsis on 8/26/20.
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class FavoriteTrucksTableViewController: UITableViewController {
 
-//    var apiController = APIController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

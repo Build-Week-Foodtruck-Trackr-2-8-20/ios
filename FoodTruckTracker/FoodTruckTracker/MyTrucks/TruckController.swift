@@ -11,12 +11,12 @@ import CoreData
 
 class TruckController {
     
-    let apiController = APIController()
-    let context = CoreDataStack.shared.container.newBackgroundContext()
-    
-    typealias CompletionHandler = (Result<Bool, NetworkError>) -> Void
-    
-    func createTruck(truck: Truck, completion: @escaping CompletionHandler = { _ in }) {
-        apiController.
-    }
+////    let apiController = APIController()
+//    let context = CoreDataStack.shared.container.newBackgroundContext()
+//
+////    typealias CompletionHandler = (Result<Bool, NetworkError>) -> Void
+//
+////    func createTruck(truck: Truck, completion: @escaping CompletionHandler = { _ in }) {
+//
+//    }
 }
