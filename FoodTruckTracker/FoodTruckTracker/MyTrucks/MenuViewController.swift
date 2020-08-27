@@ -1,14 +1,14 @@
 //
-//  TruckDetailViewController.swift
+//  MenuViewController.swift
 //  FoodTruckTracker
 //
-//  Created by Shawn Gee on 8/25/20.
+//  Created by Rob Vance on 8/25/20.
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
 import UIKit
 
-class TruckDetailViewController: UITabBarController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
