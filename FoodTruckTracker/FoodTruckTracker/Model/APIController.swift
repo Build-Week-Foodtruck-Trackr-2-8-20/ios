@@ -150,8 +150,8 @@ class APIController {
             }
 
             do {
-                let animalNames = try JSONDecoder().decode([String].self, from: data)
-                completion(.success(animalNames))
+                let allUsers = try JSONDecoder().decode([String].self, from: data)
+                completion(.success(allUsers))
             } catch {
                 print("Error decoding Users data: \(error)")
                 completion(.failure(.tryAgain))
@@ -190,8 +190,8 @@ class APIController {
             }
 
             do {
-                let animalNames = try JSONDecoder().decode([String].self, from: data)
-                completion(.success(animalNames))
+                let truckRatings = try JSONDecoder().decode([String].self, from: data)
+                completion(.success(truckRatings))
             } catch {
                 print("Error decoding Trucks Rating  data: \(error)")
                 completion(.failure(.tryAgain))
