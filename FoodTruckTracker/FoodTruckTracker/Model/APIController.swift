@@ -32,6 +32,8 @@ class APIController {
     private let baseURL = URL(string: "https://food-truck-lambda.herokuapp.com/api")!
     private lazy var registerURL = baseURL.appendingPathComponent("auth/register")
     private lazy var logInURL = baseURL.appendingPathComponent("auth/login")
+    private lazy var usersURL = baseURL.appendingPathComponent("users")
+    private lazy var dinerURL = baseURL.appendingPathComponent("diners")
     private lazy var allTruckWithRatings = baseURL.appendingPathComponent("trucks/")
 
 
@@ -124,28 +126,15 @@ class APIController {
         }
     }
 
-
     // Get All Users
-//    func fetchAllUsers(with user: User, endpoint: EndPoints, httpMethod: HTTPMethods, completion: @escaping CompletionStringArrayHandler = { _ in }) {
-//
-//
-//    }
+    func fetchAllUsers(completion: @escaping CompletionStringArrayHandler = { _ in }) {
 
-    //    Method used to fetch Truck details
-    func fetchAllTrucksWithRating(completion: @escaping CompletionStringArrayHandler = { _ in }) {
-
-        guard let bearer = bearer else {
-            completion(.failure(.noToken))
-            return
-        }
-
-        var request = URLRequest(url: allTruckWithRatings)
+        var request = URLRequest(url: usersURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.setValue("Bearer \(bearer)", forHTTPHeaderField: "Authorization")
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print("Error receiving animal name data: \(error)")
+                print("Error receiving Users data: \(error)")
                 completion(.failure(.tryAgain))
             }
             if let response = response as? HTTPURLResponse,
@@ -164,7 +153,47 @@ class APIController {
                 let animalNames = try JSONDecoder().decode([String].self, from: data)
                 completion(.success(animalNames))
             } catch {
-                print("Error decoding animal name data: \(error)")
+                print("Error decoding Users data: \(error)")
+                completion(.failure(.tryAgain))
+            }
+        }
+        task.resume()
+    }
+
+    //    Method used to fetch Truck details
+    func fetchAllTrucksWithRating(completion: @escaping CompletionStringArrayHandler = { _ in }) {
+
+        guard let bearer = bearer else {
+            completion(.failure(.noToken))
+            return
+        }
+
+        var request = URLRequest(url: allTruckWithRatings)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("Bearer \(bearer)", forHTTPHeaderField: "Authorization")
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Error receiving Trucks Rating data: \(error)")
+                completion(.failure(.tryAgain))
+            }
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.noToken))
+                return
+            }
+
+            guard let data = data else {
+                print("No data recieved from Get all ")
+                completion(.failure(.noData))
+                return
+            }
+
+            do {
+                let animalNames = try JSONDecoder().decode([String].self, from: data)
+                completion(.success(animalNames))
+            } catch {
+                print("Error decoding Trucks Rating  data: \(error)")
                 completion(.failure(.tryAgain))
             }
         }
