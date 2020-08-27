@@ -50,6 +50,6 @@ class CalloutView: UIView {
         cuisineLabel.text = truck.cuisineType
         
         // TODO: Set distance label (need to get location of user)
-        // distanceLabel.text = 
+        // distanceLabel.text =
     }
 }

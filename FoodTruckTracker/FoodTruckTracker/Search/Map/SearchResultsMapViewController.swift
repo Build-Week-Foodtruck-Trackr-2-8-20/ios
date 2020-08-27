@@ -55,6 +55,13 @@ class SearchResultsMapViewController: UIViewController {
         mapView.delegate = self
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let truck = sender as? Truck else { return }
+        print(truck.title ?? "")
+    }
+    
     // MARK: - Public Methods
     
     /// Reloads map with current annotations from the FRC
@@ -93,12 +100,6 @@ class SearchResultsMapViewController: UIViewController {
             CoreDataStack.shared.mainContext.delete(truck)
         }
         try? CoreDataStack.shared.save()
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let truck = sender as? Truck else { return }
     }
 }
 
@@ -164,32 +165,5 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
             fatalError("Only Trucks are supported as annotations at this time")
         }
         performSegue(withIdentifier: "ShowTruckDetail", sender: truck)
-    }
-
-    
-    
-}
-
-// MARK: - Truck MKAnnotation Conformance
-
-extension Truck: MKAnnotation {
-    /// Provides a `CLLocationCoordinate2D` based on a truck's latitude and longitude
-    public var coordinate: CLLocationCoordinate2D {
-        let lat = CLLocationDegrees(truckLatitude)
-        let lon = CLLocationDegrees(truckLongitude)
-        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
-    }
-    
-    public var title: String? {
-        truckName
-    }
-    
-    public var subtitle: String? {
-        cuisineType
-    }
-    
-    /// Ensures that if a truck's longitude or latitude changes, the coordinate updates
-    class func keyPathsForValuesAffectingCoordinate() -> Set<String> {
-        Set<String>([#keyPath(truckLatitude), #keyPath(truckLongitude)])
     }
 }
