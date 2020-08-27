@@ -27,6 +27,7 @@
         <attribute name="customerRatingAvg" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="departureTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="imageOfTruck" optional="YES" attributeType="String"/>
+        <attribute name="truckId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="truckLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="truckLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="truckName" optional="YES" attributeType="String"/>
@@ -37,6 +38,6 @@
         <element name="Diner" positionX="-334.48046875" positionY="-214.1875" width="128" height="118"/>
         <element name="Menu" positionX="124.48828125" positionY="-204.4140625" width="128" height="148"/>
         <element name="Operator" positionX="-181.98828125" positionY="-207.859375" width="128" height="88"/>
-        <element name="Truck" positionX="-27.01953125" positionY="-208.703125" width="128" height="193"/>
+        <element name="Truck" positionX="-27.01953125" positionY="-208.703125" width="128" height="208"/>
     </elements>
 </model>
