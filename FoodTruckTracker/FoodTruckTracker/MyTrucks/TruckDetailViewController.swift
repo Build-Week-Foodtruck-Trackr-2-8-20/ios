@@ -17,6 +17,12 @@ class TruckDetailViewController: UITabBarController {
     }
     
 
+    //MARK: - IBOutlets -
+    @IBOutlet weak var aboutTextField: UITextField!
+    @IBOutlet weak var hoursOfOperationTextField: UITextField!
+    @IBOutlet weak var cuisineTypeTextField: UITextField!
+    @IBOutlet weak var truckNameTextField: UITextField!
+    @IBOutlet weak var truckImageView: UIImageView!
     /*
     // MARK: - Navigation
 

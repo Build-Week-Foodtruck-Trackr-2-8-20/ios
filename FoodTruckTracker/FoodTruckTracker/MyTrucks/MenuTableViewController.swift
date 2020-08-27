@@ -1,5 +1,5 @@
 //
-//  MyTrucksTableViewController.swift
+//  MenuTableViewController.swift
 //  FoodTruckTracker
 //
 //  Created by Rob Vance on 8/25/20.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class MyTrucksTableViewController: UITableViewController {
-    
-    
-    
-    
+class MenuTableViewController: UITableViewController {
 
+    var apiController = APIController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
