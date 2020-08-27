@@ -94,6 +94,12 @@ class SearchResultsMapViewController: UIViewController {
         }
         try? CoreDataStack.shared.save()
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let truck = sender as? Truck else { return }
+    }
 }
 
 // MARK: - Fetched Results Controller Delegate
@@ -148,22 +154,20 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
         annotationView.detailCalloutAccessoryView = calloutView
         
         let rightButton = UIButton(type: .detailDisclosure)
-        rightButton.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
         annotationView.rightCalloutAccessoryView = rightButton
         
         return annotationView
     }
     
-    @objc func showDetail() {
-        performSegue(withIdentifier: "ShowTruckDetail", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let truck = mapView.selectedAnnotations.first as? Truck else {
-            return
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let truck = view.annotation as? Truck else {
+            fatalError("Only Trucks are supported as annotations at this time")
         }
-        // Pass on truck to detail vc
+        performSegue(withIdentifier: "ShowTruckDetail", sender: truck)
     }
+
+    
+    
 }
 
 // MARK: - Truck MKAnnotation Conformance
