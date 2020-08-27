@@ -130,6 +130,14 @@ extension Truck: MKAnnotation {
         return CLLocationCoordinate2D(latitude: lat, longitude: lon)
     }
     
+    public var title: String? {
+        truckName
+    }
+    
+    public var subtitle: String? {
+        cuisineType
+    }
+    
     /// Ensures that if a truck's longitude or latitude changes, the coordinate updates
     class func keyPathsForValuesAffectingCoordinate() -> Set<String> {
         Set<String>([#keyPath(truckLatitude), #keyPath(truckLongitude)])
