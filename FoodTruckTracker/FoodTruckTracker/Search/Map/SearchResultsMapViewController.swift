@@ -60,24 +60,23 @@ class SearchResultsMapViewController: UIViewController {
     
     /// Adds 50 trucks to core data for testing
     @IBAction func seedTrucks(_ sender: UIButton) {
-        for _ in 0..<50 {
-            let lat = Double.random(in: 32 ... 34)
-            let lon = Double.random(in: -82 ... -80)
-            
-            Truck(cuisineType: "American",
-                  truckName: "WHATABURGER",
-                  customerRating: 5,
-                  customerRatingAvg: 5,
-                  imageOfTruck: """
-                  https://www.kltv.com/resizer/or5mqVfPSUFp92P-ZnRxmQ5btds=/1200x600/cloudfront-us-east-1.\
-                  images.arcpublishing.com/raycom/MR4RBHVK3JBSZOUZFXHVIFZAJY.jpeg
-                  """,
-                  truckLatitude: lat,
-                  truckLongitude: lon)
+        for i in 0..<50 {
+                let lat = Double.random(in: 32 ... 34)
+                let lon = Double.random(in: -82 ... -80)
+                Truck(cuisineType: "American",
+                      truckName: "WHATABURGER",
+                      customerRating: 5,
+                      customerRatingAvg: 5,
+                      imageOfTruck: """
+                      https://www.kltv.com/resizer/or5mqVfPSUFp92P-ZnRxmQ5btds=/1200x600/cloudfront-us-east-1.\
+                      images.arcpublishing.com/raycom/MR4RBHVK3JBSZOUZFXHVIFZAJY.jpeg
+                      """,
+                      truckLatitude: lat,
+                      truckLongitude: lon,
+                      truckId: i)
+            }
+            try? CoreDataStack.shared.save()
         }
-        
-        try? CoreDataStack.shared.save()
-    }
     
     /// Removes all currently fetched trucks from core data
     @IBAction func deleteTrucks(_ sender: UIButton) {
