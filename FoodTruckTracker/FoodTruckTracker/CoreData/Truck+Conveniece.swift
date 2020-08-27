@@ -30,6 +30,6 @@ extension Truck {
         self.imageOfTruck = imageOfTruck
         self.truckLatitude = truckLatitude
         self.truckLongitude = truckLongitude
-        self.truckId = truckId
+        self.truckId = Int16(truckId)
     }
 }

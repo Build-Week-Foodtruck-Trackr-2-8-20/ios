@@ -1,5 +1,5 @@
 //
-//  Menu+Conveniece.swift
+//  MenuItem+Conveniece.swift
 //  FoodTruckTracker
 //
 //  Created by Josh Kocsis on 8/24/20.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-extension Menu {
+extension MenuItem {
 
     @discardableResult convenience init(customerRatingAvg: Int16,
                                         customerRatings: Int16,
