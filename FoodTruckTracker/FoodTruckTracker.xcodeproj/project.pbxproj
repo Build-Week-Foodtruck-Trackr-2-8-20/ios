@@ -20,7 +20,7 @@
 		042CD93624F4C9C500ADFCB5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD93524F4C9C500ADFCB5 /* MainTabBarController.swift */; };
 		042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD93B24F4CC7300ADFCB5 /* TruckDetailViewController.swift */; };
 		042CD93F24F4CF7000ADFCB5 /* TruckDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042CD93E24F4CF7000ADFCB5 /* TruckDetail.storyboard */; };
-		042CD95024F4DAB700ADFCB5 /* MenuItems+Conveniece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94224F4DAB700ADFCB5 /* MenuItems+Conveniece.swift */; };
+		042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94224F4DAB700ADFCB5 /* MenuItem+Conveniece.swift */; };
 		042CD95124F4DAB700ADFCB5 /* FTTData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94324F4DAB700ADFCB5 /* FTTData.xcdatamodeld */; };
 		042CD95524F4DAB700ADFCB5 /* Truck+Conveniece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94824F4DAB700ADFCB5 /* Truck+Conveniece.swift */; };
 		042CD95D24F4DB0000ADFCB5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD95C24F4DB0000ADFCB5 /* CoreDataStack.swift */; };
@@ -71,7 +71,7 @@
 		042CD93524F4C9C500ADFCB5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		042CD93B24F4CC7300ADFCB5 /* TruckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckDetailViewController.swift; sourceTree = "<group>"; };
 		042CD93E24F4CF7000ADFCB5 /* TruckDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TruckDetail.storyboard; sourceTree = "<group>"; };
-		042CD94224F4DAB700ADFCB5 /* MenuItems+Conveniece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItems+Conveniece.swift"; sourceTree = "<group>"; };
+		042CD94224F4DAB700ADFCB5 /* MenuItem+Conveniece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItem+Conveniece.swift"; sourceTree = "<group>"; };
 		042CD94424F4DAB700ADFCB5 /* FTTData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FTTData.xcdatamodel; sourceTree = "<group>"; };
 		042CD94824F4DAB700ADFCB5 /* Truck+Conveniece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Truck+Conveniece.swift"; sourceTree = "<group>"; };
 		042CD95C24F4DB0000ADFCB5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				042CD95C24F4DB0000ADFCB5 /* CoreDataStack.swift */,
-				042CD94224F4DAB700ADFCB5 /* MenuItems+Conveniece.swift */,
+				042CD94224F4DAB700ADFCB5 /* MenuItem+Conveniece.swift */,
 				042CD94324F4DAB700ADFCB5 /* FTTData.xcdatamodeld */,
 				042CD94824F4DAB700ADFCB5 /* Truck+Conveniece.swift */,
 				51B1C68624F73EC70001CD78 /* FTTRepresentation.swift */,
@@ -553,7 +553,7 @@
 				51B1C68324F730F10001CD78 /* StarRatingController.swift in Sources */,
 				042CD92424F4C4EB00ADFCB5 /* SearchViewController.swift in Sources */,
 				042CD93624F4C9C500ADFCB5 /* MainTabBarController.swift in Sources */,
-				042CD95024F4DAB700ADFCB5 /* MenuItems+Conveniece.swift in Sources */,
+				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				042CD93124F4C6DA00ADFCB5 /* MyTrucksViewController.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,

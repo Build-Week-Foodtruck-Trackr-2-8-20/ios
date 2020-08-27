@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="MenuItems" representedClassName="MenuItems" syncable="YES">
+    <entity name="MenuItem" representedClassName="MenuItem" syncable="YES" codeGenerationType="class">
         <attribute name="customerRatingAvg" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="customerRatings" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="itemDescription" optional="YES" attributeType="String"/>
@@ -9,7 +9,7 @@
         <attribute name="itemPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="truckId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="Truck" representedClassName="Truck" syncable="YES">
+    <entity name="Truck" representedClassName="Truck" syncable="YES" codeGenerationType="class">
         <attribute name="cuisineType" optional="YES" attributeType="String"/>
         <attribute name="customerRating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="customerRatingAvg" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -21,7 +21,7 @@
         <attribute name="truckName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="MenuItems" positionX="124.48828125" positionY="-204.4140625" width="128" height="148"/>
+        <element name="MenuItem" positionX="160" positionY="192" width="128" height="148"/>
         <element name="Truck" positionX="-27.01953125" positionY="-208.703125" width="128" height="178"/>
     </elements>
 </model>

@@ -24,7 +24,7 @@ class StarRatingController: UIStackView {
                 theButton.setImage(UIImage(named: starsEmpty), for: .normal)
                 theButton.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
                 theButton.tag = starTag
-                starTag = starTag + 1
+                starTag += 1
             }
         }
     }
