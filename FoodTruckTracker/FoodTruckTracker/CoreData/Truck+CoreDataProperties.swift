@@ -24,6 +24,7 @@ extension Truck {
     @NSManaged public var imageOfTruck: String?
     @NSManaged public var truckLatitude: Double
     @NSManaged public var truckLongitude: Double
+    @NSManaged public var truckId: Int
     @NSManaged public var menu: NSSet?
     @NSManaged public var theOperator: Operator?
 
