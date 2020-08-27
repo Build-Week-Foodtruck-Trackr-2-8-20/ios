@@ -184,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				042CD91924F4C49800ADFCB5 /* Login.storyboard */,
-				E1620C0024F5FBA0007F00AC /* APIController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,6 +297,7 @@
 		51D93BB824EE1C01009FC1A4 /* FoodTruckTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E1620C0224F60589007F00AC /* Model */,
 				042CD94024F4DAB700ADFCB5 /* CoreData */,
 				042CD93724F4CAE500ADFCB5 /* App */,
 				042CD92A24F4C4F900ADFCB5 /* Login */,
@@ -326,6 +326,14 @@
 				51D93BDD24EE1C02009FC1A4 /* Info.plist */,
 			);
 			path = FoodTruckTrackerUITests;
+			sourceTree = "<group>";
+		};
+		E1620C0224F60589007F00AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1620C0024F5FBA0007F00AC /* APIController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FA58BAA6FE3BE509867F1019 /* Frameworks */ = {
