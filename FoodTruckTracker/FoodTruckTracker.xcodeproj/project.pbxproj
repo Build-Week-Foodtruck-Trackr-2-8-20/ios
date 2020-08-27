@@ -27,6 +27,7 @@
 		51B1C68124F7302C0001CD78 /* FavoriteTrucksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68024F7302C0001CD78 /* FavoriteTrucksTableViewController.swift */; };
 		51B1C68324F730F10001CD78 /* StarRatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68224F730F10001CD78 /* StarRatingController.swift */; };
 		51B1C68724F73EC70001CD78 /* FTTRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68624F73EC70001CD78 /* FTTRepresentation.swift */; };
+		51B1C68924F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68824F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift */; };
 		51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */; };
 		51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */; };
 		51D93BC124EE1C01009FC1A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D93BBF24EE1C01009FC1A4 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		51B1C68024F7302C0001CD78 /* FavoriteTrucksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTrucksTableViewController.swift; sourceTree = "<group>"; };
 		51B1C68224F730F10001CD78 /* StarRatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingController.swift; sourceTree = "<group>"; };
 		51B1C68624F73EC70001CD78 /* FTTRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTRepresentation.swift; sourceTree = "<group>"; };
+		51B1C68824F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTrucksTableViewCell.swift; sourceTree = "<group>"; };
 		51D93BB624EE1C01009FC1A4 /* FoodTruckTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D93BB924EE1C01009FC1A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D93BBB24EE1C01009FC1A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				042CD92B24F4C66400ADFCB5 /* FavoriteTrucks.storyboard */,
 				51B1C68024F7302C0001CD78 /* FavoriteTrucksTableViewController.swift */,
 				51B1C68224F730F10001CD78 /* StarRatingController.swift */,
+				51B1C68824F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift */,
 			);
 			path = FavoriteTrucks;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				042CD95D24F4DB0000ADFCB5 /* CoreDataStack.swift in Sources */,
 				042CD95124F4DAB700ADFCB5 /* FTTData.xcdatamodeld in Sources */,
 				51B1C68724F73EC70001CD78 /* FTTRepresentation.swift in Sources */,
+				51B1C68924F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift in Sources */,
 				51B1C68124F7302C0001CD78 /* FavoriteTrucksTableViewController.swift in Sources */,
 				042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */,
 				042CD95524F4DAB700ADFCB5 /* Truck+Conveniece.swift in Sources */,
