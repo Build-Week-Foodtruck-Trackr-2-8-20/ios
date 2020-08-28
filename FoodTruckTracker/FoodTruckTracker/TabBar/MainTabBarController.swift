@@ -13,6 +13,8 @@ class MainTabBarController: UITabBarController {
     let locationManager = CLLocationManager()
     let apiController = APIController()
     
+    private let loginNav: UINavigationController = UIStoryboard(name: "Login", bundle: .main).instantiateInitialViewController()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,12 +22,17 @@ class MainTabBarController: UITabBarController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         
-        print(children[0])
+    
         guard let nav = children[0] as? UINavigationController,
             let searchVC = nav.viewControllers.first as? SearchViewController else {
             fatalError("Check main storyboard for \(SearchViewController.self)")
         }
         searchVC.apiController = apiController
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        present(loginNav, animated: true)
     }
 }
 
