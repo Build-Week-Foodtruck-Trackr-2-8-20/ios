@@ -12,6 +12,7 @@ import CoreData
 class FavoriteTrucksTableViewController: UITableViewController {
 
     private let apiController = APIController()
+    var truck: Truck?
     let reuseIdentifier = "FavoriteTrucks"
 
     lazy var fetchedResultsController: NSFetchedResultsController<Truck> = {
@@ -70,9 +71,10 @@ class FavoriteTrucksTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "TruckDetail":
-                        if let detailVC = segue.destination as? TruckDetailViewController,
+            if let detailVC = segue.destination as? TruckDetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
-                detailVC = fetchedResultsController.object(at: indexPath)
+                detailVC. = fetchedResultsController.object(at: indexPath)
+                detailVC.apiController = apiController
             }
         default:
             break
