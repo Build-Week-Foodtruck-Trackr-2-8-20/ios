@@ -11,6 +11,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     let locationManager = CLLocationManager()
+    let apiController = APIController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,9 @@ class MainTabBarController: UITabBarController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let searchVC = segue.destination as? SearchViewController {
+            searchVC.apiController = apiController
+        }
     }
 
 }
