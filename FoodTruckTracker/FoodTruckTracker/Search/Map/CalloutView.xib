@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalloutView" customModule="FoodTruckTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="8iA-k0-vS1"/>
+                <outlet property="cuisineLabel" destination="zZc-fY-pye" id="8fP-gK-a9u"/>
+                <outlet property="distanceLabel" destination="kFC-yV-rCb" id="zTI-XU-q1r"/>
+                <outlet property="imageView" destination="EJx-RU-uqw" id="iff-Ib-gV2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-RU-uqw">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="EJx-RU-uqw" secondAttribute="height" multiplier="1:1" id="YoB-zS-48k"/>
+                        <constraint firstAttribute="height" constant="60" id="uOB-8X-yYi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-fY-pye">
+                    <rect key="frame" x="70" y="0.0" width="68.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.8 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFC-yV-rCb">
+                    <rect key="frame" x="70" y="22.5" width="38.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zZc-fY-pye" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4iE-YH-h81"/>
+                <constraint firstItem="EJx-RU-uqw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I37-zE-R4l"/>
+                <constraint firstItem="EJx-RU-uqw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SVx-lJ-DCK"/>
+                <constraint firstItem="kFC-yV-rCb" firstAttribute="leading" secondItem="zZc-fY-pye" secondAttribute="leading" id="W6T-rZ-lXe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zZc-fY-pye" secondAttribute="trailing" id="YCZ-ql-7Q5"/>
+                <constraint firstItem="kFC-yV-rCb" firstAttribute="top" secondItem="zZc-fY-pye" secondAttribute="bottom" constant="3" id="d2O-ga-SHp"/>
+                <constraint firstAttribute="bottom" secondItem="EJx-RU-uqw" secondAttribute="bottom" id="eNW-kS-y73"/>
+                <constraint firstItem="zZc-fY-pye" firstAttribute="leading" secondItem="EJx-RU-uqw" secondAttribute="trailing" constant="10" id="uet-zT-CMh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-250.00000000000003" y="-10.044642857142856"/>
+        </view>
+    </objects>
+</document>
