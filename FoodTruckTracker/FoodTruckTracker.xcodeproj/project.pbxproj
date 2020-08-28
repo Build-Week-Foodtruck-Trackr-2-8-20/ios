@@ -39,6 +39,8 @@
 		E1620C0124F5FBA0007F00AC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1620C0024F5FBA0007F00AC /* APIController.swift */; };
 		E18BA93424F75226005C54BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18BA93324F75226005C54BE /* User.swift */; };
 		E18BA93624F7614A005C54BE /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18BA93524F7614A005C54BE /* Bearer.swift */; };
+		E1F681CC24F7E4D2007228CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F681CB24F7E4D2007228CE /* LoginViewController.swift */; };
+		E1F681CE24F7FA50007228CE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F681CD24F7FA50007228CE /* SignUpViewController.swift */; };
 		E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D64A24F5FBCD0082374F /* MyTrucksTableViewController.swift */; };
 		E4D5D64D24F60D690082374F /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D64C24F60D690082374F /* MenuTableViewController.swift */; };
 		E4D5D65124F60D980082374F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D65024F60D980082374F /* MenuViewController.swift */; };
@@ -112,6 +114,8 @@
 		E1620C0024F5FBA0007F00AC /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		E18BA93324F75226005C54BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E18BA93524F7614A005C54BE /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		E1F681CB24F7E4D2007228CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E1F681CD24F7FA50007228CE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E4D5D64A24F5FBCD0082374F /* MyTrucksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrucksTableViewController.swift; sourceTree = "<group>"; };
 		E4D5D64C24F60D690082374F /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		E4D5D65024F60D980082374F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				042CD91924F4C49800ADFCB5 /* Login.storyboard */,
+				E1F681CB24F7E4D2007228CE /* LoginViewController.swift */,
+				E1F681CD24F7FA50007228CE /* SignUpViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -584,12 +590,9 @@
 				042CD95124F4DAB700ADFCB5 /* FTTData.xcdatamodeld in Sources */,
 				E18BA93424F75226005C54BE /* User.swift in Sources */,
 				E18BA93624F7614A005C54BE /* Bearer.swift in Sources */,
-				042CD95324F4DAB700ADFCB5 /* Diner+Conveniece.swift in Sources */,
-				042CD95724F4DAB700ADFCB5 /* Diner+CoreDataClass.swift in Sources */,
-				042CD95224F4DAB700ADFCB5 /* Operator+Conveniece.swift in Sources */,
-				042CD95624F4DAB700ADFCB5 /* Operator+CoreDataClass.swift in Sources */,
 				51B1C68724F73EC70001CD78 /* FTTRepresentation.swift in Sources */,
 				51B1C68924F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift in Sources */,
+				E1F681CE24F7FA50007228CE /* SignUpViewController.swift in Sources */,
 				51B1C68124F7302C0001CD78 /* FavoriteTrucksTableViewController.swift in Sources */,
 				042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */,
 				042CD95524F4DAB700ADFCB5 /* Truck+Conveniece.swift in Sources */,
@@ -608,6 +611,7 @@
 				042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */,
 				E4D5D65524F60EEA0082374F /* FoodTableViewCell.swift in Sources */,
 				E4D5D65724F742670082374F /* TruckController.swift in Sources */,
+				E1F681CC24F7E4D2007228CE /* LoginViewController.swift in Sources */,
 				E4D5D65324F60EC40082374F /* TruckTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
