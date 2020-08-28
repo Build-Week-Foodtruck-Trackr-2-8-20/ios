@@ -11,17 +11,19 @@ import UIKit
 
 class CalloutView: UIView {
     
-    var userLocation: MKUserLocation? {
-        didSet {
-            updateDistanceLabel()
-        }
+    var cuisine: String? {
+        get { return cuisineLabel.text }
+        set { cuisineLabel.text = newValue }
     }
     
-    var truck: Truck? {
-        didSet {
-            updateViews()
-            updateDistanceLabel()
-        }
+    var distance: String? {
+        get { return distanceLabel.text }
+        set { distanceLabel.text = newValue }
+    }
+    
+    var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
 
     @IBOutlet private var contentView: UIView!
@@ -44,31 +46,5 @@ class CalloutView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    private func updateViews() {
-        guard let truck = truck,
-              let imageOfTruck = truck.imageOfTruck else { return }
-        
-        // TODO: Proper call to fetch image using APIController
-        if let imageURL = URL(string: imageOfTruck),
-           let imageData = try? Data(contentsOf: imageURL) {
-            imageView.image = UIImage(data: imageData)
-        }
-        
-        cuisineLabel.text = truck.cuisineType
-    }
-    
-    private func updateDistanceLabel() {
-        guard let truck = truck,
-              let userLocation = userLocation else { return }
-        let truckLocation = CLLocation(latitude: truck.coordinate.latitude,
-                                       longitude: truck.coordinate.longitude)
-        guard let distance = userLocation.location?.distance(from: truckLocation) else {
-            return
-        }
-        
-        let meters = Measurement(value: distance, unit: UnitLength.meters)
-        distanceLabel.text = MeasurementFormatter.shared.string(from: meters)
     }
 }

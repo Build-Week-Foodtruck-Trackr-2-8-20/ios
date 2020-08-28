@@ -13,6 +13,8 @@ import UIKit
 class SearchResultsMapViewController: UIViewController {
     // MARK: - Public Properties
     
+    var apiController: APIController?
+    
     var fetchedResultsController: NSFetchedResultsController<Truck>? {
         didSet {
             reloadData()
@@ -195,8 +197,27 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
         annotationView.canShowCallout = true
         
         let calloutView = CalloutView(frame: .zero)
-        calloutView.truck = truck
-        calloutView.userLocation = mapView.userLocation
+        
+        calloutView.cuisine = truck.cuisineType
+        
+        let truckLocation = CLLocation(latitude: truck.coordinate.latitude,
+                                       longitude: truck.coordinate.longitude)
+        if let distance = mapView.userLocation.location?.distance(from: truckLocation) {
+            let meters = Measurement(value: distance, unit: UnitLength.meters)
+            calloutView.distance = meters.string
+        }
+        
+        apiController?.fetchTruckImage(at: truck.imageOfTruck!) { result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    calloutView.image = image
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         annotationView.detailCalloutAccessoryView = calloutView
         
         let rightButton = UIButton(type: .detailDisclosure)
