@@ -46,6 +46,20 @@ class SearchResultsMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.register(
+            MKMarkerAnnotationView.self,
+            forAnnotationViewWithReuseIdentifier: NSStringFromClass(Truck.self)
+        )
+        
+        mapView.delegate = self
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let truck = sender as? Truck else { return }
+        print(truck.title ?? "")
     }
     
     // MARK: - Public Methods
@@ -58,9 +72,9 @@ class SearchResultsMapViewController: UIViewController {
     
     // MARK: - Testing Buttons
     
-    /// Adds 50 trucks to core data for testing
+    /// Adds 20 trucks to core data for testing
     @IBAction func seedTrucks(_ sender: UIButton) {
-        for i in 0..<50 {
+        for i in 0..<20 {
                 let lat = Double.random(in: 32 ... 34)
                 let lon = Double.random(in: -82 ... -80)
                 Truck(cuisineType: "American",
@@ -120,18 +134,36 @@ extension SearchResultsMapViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
-// MARK: - Truck MKAnnotation Conformance
-
-extension Truck: MKAnnotation {
-    /// Provides a `CLLocationCoordinate2D` based on a truck's latitude and longitude
-    public var coordinate: CLLocationCoordinate2D {
-        let lat = CLLocationDegrees(truckLatitude)
-        let lon = CLLocationDegrees(truckLongitude)
-        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
+extension SearchResultsMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let truck = annotation as? Truck else {
+            fatalError("Only Trucks are supported as annotations at this time")
+        }
+        
+        guard let annotationView = mapView.dequeueReusableAnnotationView(
+            withIdentifier: NSStringFromClass(Truck.self),
+            for: annotation) as? MKMarkerAnnotationView else {
+                fatalError("Unable to cast annotationView as \(MKMarkerAnnotationView.self)")
+        }
+        
+        annotationView.glyphImage = UIImage(named: "Truck")
+        annotationView.markerTintColor = .systemOrange
+        annotationView.canShowCallout = true
+        
+        let calloutView = CalloutView(frame: .zero)
+        calloutView.truck = truck
+        annotationView.detailCalloutAccessoryView = calloutView
+        
+        let rightButton = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = rightButton
+        
+        return annotationView
     }
     
-    /// Ensures that if a truck's longitude or latitude changes, the coordinate updates
-    class func keyPathsForValuesAffectingCoordinate() -> Set<String> {
-        Set<String>([#keyPath(truckLatitude), #keyPath(truckLongitude)])
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let truck = view.annotation as? Truck else {
+            fatalError("Only Trucks are supported as annotations at this time")
+        }
+        performSegue(withIdentifier: "ShowTruckDetail", sender: truck)
     }
 }
