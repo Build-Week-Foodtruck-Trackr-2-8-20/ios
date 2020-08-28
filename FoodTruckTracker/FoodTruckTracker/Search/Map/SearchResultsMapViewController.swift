@@ -52,7 +52,30 @@ class SearchResultsMapViewController: UIViewController {
             forAnnotationViewWithReuseIdentifier: NSStringFromClass(Truck.self)
         )
         
+        mapView.register(
+            MKMarkerAnnotationView.self,
+            forAnnotationViewWithReuseIdentifier: NSStringFromClass(MKUserLocation.self)
+        )
+        
         mapView.delegate = self
+        mapView.showsUserLocation = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showUser()
+    }
+    
+    func showUser() {
+        if let userCoordinate = mapView.userLocation.location?.coordinate {
+            let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+            let region = MKCoordinateRegion(
+                center: userCoordinate,
+                span: span
+            )
+            mapView.setRegion(region, animated: true)
+        }
+        
     }
     
     // MARK: - Navigation
@@ -134,15 +157,36 @@ extension SearchResultsMapViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
+// MARK: - Map View Delegate
+
 extension SearchResultsMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let truck = annotation as? Truck else {
-            fatalError("Only Trucks are supported as annotations at this time")
+        if let truck = annotation as? Truck {
+            return annotationViewForTruck(truck)
+        } else if let userLocation = annotation as? MKUserLocation {
+            return annotationViewForUserLocation(userLocation: userLocation)
         }
         
+        return nil
+    }
+    
+    func annotationViewForUserLocation(userLocation: MKUserLocation) -> MKMarkerAnnotationView {
+        guard let annotationView = mapView.dequeueReusableAnnotationView(
+            withIdentifier: NSStringFromClass(MKUserLocation.self),
+            for: userLocation) as? MKMarkerAnnotationView else {
+                fatalError("Unable to cast annotationView as \(MKMarkerAnnotationView.self)")
+        }
+        
+        annotationView.markerTintColor = .systemBlue
+        annotationView.glyphImage = UIImage(systemName: "person.fill")
+        
+        return annotationView
+    }
+    
+    func annotationViewForTruck(_ truck: Truck) -> MKMarkerAnnotationView {
         guard let annotationView = mapView.dequeueReusableAnnotationView(
             withIdentifier: NSStringFromClass(Truck.self),
-            for: annotation) as? MKMarkerAnnotationView else {
+            for: truck) as? MKMarkerAnnotationView else {
                 fatalError("Unable to cast annotationView as \(MKMarkerAnnotationView.self)")
         }
         
@@ -160,7 +204,9 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
         guard let truck = view.annotation as? Truck else {
             fatalError("Only Trucks are supported as annotations at this time")
         }
