@@ -8,6 +8,12 @@
 
 import Foundation
 
+extension Measurement {
+    var string: String {
+        MeasurementFormatter.shared.string(from: self)
+    }
+}
+
 extension MeasurementFormatter {
     static let shared: MeasurementFormatter = {
         let measurementForamtter = MeasurementFormatter()
