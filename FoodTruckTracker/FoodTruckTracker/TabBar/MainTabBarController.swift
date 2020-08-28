@@ -6,12 +6,19 @@
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
 
 class MainTabBarController: UITabBarController {
-
+    var locationManager: CLLocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestWhenInUseAuthorization()
     }
     
     // MARK: - Navigation
@@ -21,4 +28,22 @@ class MainTabBarController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
 
+}
+
+extension MainTabBarController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager?.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // Store location in user defaults?
+        // Observe changes to location 
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("⚠️ Failed to get location")
+    }
+    
 }
