@@ -10,6 +10,8 @@ import UIKit
 
 class FoodTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var foodItemLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
