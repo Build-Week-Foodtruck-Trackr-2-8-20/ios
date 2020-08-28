@@ -19,16 +19,14 @@ class MainTabBarController: UITabBarController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-    }
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let searchVC = segue.destination as? SearchViewController {
-            searchVC.apiController = apiController
+        
+        print(children[0])
+        guard let nav = children[0] as? UINavigationController,
+            let searchVC = nav.viewControllers.first as? SearchViewController else {
+            fatalError("Check main storyboard for \(SearchViewController.self)")
         }
+        searchVC.apiController = apiController
     }
-
 }
 
 extension MainTabBarController: CLLocationManagerDelegate {

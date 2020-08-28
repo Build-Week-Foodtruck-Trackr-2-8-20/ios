@@ -12,7 +12,11 @@ import UIKit
 class SearchViewController: UIViewController {
     // MARK: - Public Properties
     
-    var apiController: APIController?
+    var apiController: APIController? {
+        didSet {
+            mapVC.apiController = apiController
+        }
+    }
     
     // MARK: - IBOutlets
     
