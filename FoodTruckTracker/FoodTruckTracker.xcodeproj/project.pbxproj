@@ -26,6 +26,8 @@
 		0473F7FF24F7856100FCAB5C /* CalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473F7FE24F7856100FCAB5C /* CalloutView.xib */; };
 		0473F80124F7869E00FCAB5C /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80024F7869E00FCAB5C /* CalloutView.swift */; };
 		0473F80324F796A300FCAB5C /* Truck+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80224F796A300FCAB5C /* Truck+MKAnnotation.swift */; };
+		0473F80524F8AA4600FCAB5C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80424F8AA4600FCAB5C /* UserDefaults.swift */; };
+		0473F80824F8AAD500FCAB5C /* UserDefaultsObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80724F8AAD500FCAB5C /* UserDefaultsObservation.swift */; };
 		51B1C68124F7302C0001CD78 /* FavoriteTrucksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68024F7302C0001CD78 /* FavoriteTrucksTableViewController.swift */; };
 		51B1C68324F730F10001CD78 /* StarRatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68224F730F10001CD78 /* StarRatingController.swift */; };
 		51B1C68724F73EC70001CD78 /* FTTRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1C68624F73EC70001CD78 /* FTTRepresentation.swift */; };
@@ -92,6 +94,8 @@
 		0473F7FE24F7856100FCAB5C /* CalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalloutView.xib; sourceTree = "<group>"; };
 		0473F80024F7869E00FCAB5C /* CalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
 		0473F80224F796A300FCAB5C /* Truck+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Truck+MKAnnotation.swift"; sourceTree = "<group>"; };
+		0473F80424F8AA4600FCAB5C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		0473F80724F8AAD500FCAB5C /* UserDefaultsObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservation.swift; sourceTree = "<group>"; };
 		067E8D58DAEAB9C008A63112 /* Pods-FoodTruckTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker.release.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker/Pods-FoodTruckTracker.release.xcconfig"; sourceTree = "<group>"; };
 		1134341206100CD3EB552737 /* Pods-FoodTruckTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C4620CE0F4EE2356D504324 /* Pods-FoodTruckTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTruckTrackerTests/Pods-FoodTruckTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +272,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		0473F80624F8AA5800FCAB5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0473F80424F8AA4600FCAB5C /* UserDefaults.swift */,
+				0473F80724F8AAD500FCAB5C /* UserDefaultsObservation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2CA071EFFBB53158711D14EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +322,7 @@
 			children = (
 				E1620C0224F60589007F00AC /* Model */,
 				042CD94024F4DAB700ADFCB5 /* CoreData */,
+				0473F80624F8AA5800FCAB5C /* Helpers */,
 				042CD93724F4CAE500ADFCB5 /* App */,
 				042CD92A24F4C4F900ADFCB5 /* Login */,
 				042CD93824F4CB1700ADFCB5 /* TabBar */,
@@ -603,6 +617,7 @@
 				51B1C68724F73EC70001CD78 /* FTTRepresentation.swift in Sources */,
 				51B1C68924F755AF0001CD78 /* FavoriteTrucksTableViewCell.swift in Sources */,
 				E1F681CE24F7FA50007228CE /* SignUpViewController.swift in Sources */,
+				0473F80824F8AAD500FCAB5C /* UserDefaultsObservation.swift in Sources */,
 				51B1C68124F7302C0001CD78 /* FavoriteTrucksTableViewController.swift in Sources */,
 				042CD93C24F4CC7300ADFCB5 /* TruckDetailViewController.swift in Sources */,
 				042CD95524F4DAB700ADFCB5 /* Truck+Conveniece.swift in Sources */,
@@ -622,6 +637,7 @@
 				E1620C0124F5FBA0007F00AC /* APIController.swift in Sources */,
 				042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */,
 				E4D5D65524F60EEA0082374F /* FoodTableViewCell.swift in Sources */,
+				0473F80524F8AA4600FCAB5C /* UserDefaults.swift in Sources */,
 				E4D5D65724F742670082374F /* TruckController.swift in Sources */,
 				E1F681CC24F7E4D2007228CE /* LoginViewController.swift in Sources */,
 				E4D5D65324F60EC40082374F /* TruckTableViewCell.swift in Sources */,
