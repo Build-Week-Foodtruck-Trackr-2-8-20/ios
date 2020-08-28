@@ -6,15 +6,24 @@
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
+import MapKit
 import UIKit
 
 class CalloutView: UIView {
-    var truck: Truck? {
+    
+    var userLocation: MKUserLocation? {
         didSet {
-            updateViews()
+            updateDistanceLabel()
         }
     }
     
+    var truck: Truck? {
+        didSet {
+            updateViews()
+            updateDistanceLabel()
+        }
+    }
+
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var cuisineLabel: UILabel!
@@ -48,8 +57,18 @@ class CalloutView: UIView {
         }
         
         cuisineLabel.text = truck.cuisineType
+    }
+    
+    private func updateDistanceLabel() {
+        guard let truck = truck,
+              let userLocation = userLocation else { return }
+        let truckLocation = CLLocation(latitude: truck.coordinate.latitude,
+                                       longitude: truck.coordinate.longitude)
+        guard let distance = userLocation.location?.distance(from: truckLocation) else {
+            return
+        }
         
-        // TODO: Set distance label (need to get location of user)
-        // distanceLabel.text =
+        let meters = Measurement(value: distance, unit: UnitLength.meters)
+        distanceLabel.text = MeasurementFormatter.shared.string(from: meters)
     }
 }

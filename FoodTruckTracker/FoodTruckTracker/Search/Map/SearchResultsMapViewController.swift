@@ -196,6 +196,7 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
         
         let calloutView = CalloutView(frame: .zero)
         calloutView.truck = truck
+        calloutView.userLocation = mapView.userLocation
         annotationView.detailCalloutAccessoryView = calloutView
         
         let rightButton = UIButton(type: .detailDisclosure)
