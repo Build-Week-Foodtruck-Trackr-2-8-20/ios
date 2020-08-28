@@ -12,7 +12,8 @@ import Foundation
 /// property wrapper which makes it even simpler to get and set user defaults.
 /// You can also observe changes on user defaults using a UserDefaultsObservation.
 extension UserDefaults {
-    @UserDefault(Key("lastLocation")) static var lastLocation: Dictionary<String, Double>?
+    @UserDefault(Key("lastLatitude")) static var lastLatitude: Double?
+    @UserDefault(Key("lastLongitude")) static var lastLongitude: Double?
 }
 
 // MARK: - Property Wrapper
