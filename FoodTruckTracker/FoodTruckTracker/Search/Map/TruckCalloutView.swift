@@ -8,20 +8,20 @@
 
 import UIKit
 
-class CalloutView: UIView {
+class TruckCalloutView: UIView {
     
     var cuisine: String? {
-        get { return cuisineLabel.text }
+        get { cuisineLabel.text }
         set { cuisineLabel.text = newValue }
     }
     
     var distance: String? {
-        get { return distanceLabel.text }
+        get { distanceLabel.text }
         set { distanceLabel.text = newValue }
     }
     
     var image: UIImage? {
-        get { return imageView.image }
+        get { imageView.image }
         set { imageView.image = newValue }
     }
 
@@ -41,7 +41,7 @@ class CalloutView: UIView {
     }
     
     private func setUp() {
-        Bundle.main.loadNibNamed("CalloutView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("TruckCalloutView", owner: self, options: nil)
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

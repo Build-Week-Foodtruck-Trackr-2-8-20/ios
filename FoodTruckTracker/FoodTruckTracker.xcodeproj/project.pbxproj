@@ -23,8 +23,8 @@
 		042CD95124F4DAB700ADFCB5 /* FTTData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94324F4DAB700ADFCB5 /* FTTData.xcdatamodeld */; };
 		042CD95524F4DAB700ADFCB5 /* Truck+Conveniece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD94824F4DAB700ADFCB5 /* Truck+Conveniece.swift */; };
 		042CD95D24F4DB0000ADFCB5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CD95C24F4DB0000ADFCB5 /* CoreDataStack.swift */; };
-		0473F7FF24F7856100FCAB5C /* CalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473F7FE24F7856100FCAB5C /* CalloutView.xib */; };
-		0473F80124F7869E00FCAB5C /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80024F7869E00FCAB5C /* CalloutView.swift */; };
+		0473F7FF24F7856100FCAB5C /* TruckCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473F7FE24F7856100FCAB5C /* TruckCalloutView.xib */; };
+		0473F80124F7869E00FCAB5C /* TruckCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80024F7869E00FCAB5C /* TruckCalloutView.swift */; };
 		0473F80324F796A300FCAB5C /* Truck+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80224F796A300FCAB5C /* Truck+MKAnnotation.swift */; };
 		0473F80524F8AA4600FCAB5C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80424F8AA4600FCAB5C /* UserDefaults.swift */; };
 		0473F80824F8AAD500FCAB5C /* UserDefaultsObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473F80724F8AAD500FCAB5C /* UserDefaultsObservation.swift */; };
@@ -92,8 +92,8 @@
 		042CD94424F4DAB700ADFCB5 /* FTTData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FTTData.xcdatamodel; sourceTree = "<group>"; };
 		042CD94824F4DAB700ADFCB5 /* Truck+Conveniece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Truck+Conveniece.swift"; sourceTree = "<group>"; };
 		042CD95C24F4DB0000ADFCB5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		0473F7FE24F7856100FCAB5C /* CalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalloutView.xib; sourceTree = "<group>"; };
-		0473F80024F7869E00FCAB5C /* CalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
+		0473F7FE24F7856100FCAB5C /* TruckCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TruckCalloutView.xib; sourceTree = "<group>"; };
+		0473F80024F7869E00FCAB5C /* TruckCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckCalloutView.swift; sourceTree = "<group>"; };
 		0473F80224F796A300FCAB5C /* Truck+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Truck+MKAnnotation.swift"; sourceTree = "<group>"; };
 		0473F80424F8AA4600FCAB5C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		0473F80724F8AAD500FCAB5C /* UserDefaultsObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservation.swift; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 				042CD91F24F4C4EB00ADFCB5 /* SearchResultsMap.storyboard */,
 				042CD92024F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift */,
 				0473F80224F796A300FCAB5C /* Truck+MKAnnotation.swift */,
-				0473F7FE24F7856100FCAB5C /* CalloutView.xib */,
-				0473F80024F7869E00FCAB5C /* CalloutView.swift */,
+				0473F7FE24F7856100FCAB5C /* TruckCalloutView.xib */,
+				0473F80024F7869E00FCAB5C /* TruckCalloutView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -498,7 +498,7 @@
 				51D93BC324EE1C02009FC1A4 /* Assets.xcassets in Resources */,
 				51D93BC124EE1C01009FC1A4 /* Main.storyboard in Resources */,
 				042CD93424F4C6FA00ADFCB5 /* MyTrucks.storyboard in Resources */,
-				0473F7FF24F7856100FCAB5C /* CalloutView.xib in Resources */,
+				0473F7FF24F7856100FCAB5C /* TruckCalloutView.xib in Resources */,
 				042CD92524F4C4EB00ADFCB5 /* Search.storyboard in Resources */,
 				042CD93F24F4CF7000ADFCB5 /* TruckDetail.storyboard in Resources */,
 				042CD92C24F4C66400ADFCB5 /* FavoriteTrucks.storyboard in Resources */,
@@ -628,7 +628,7 @@
 				51B1C68324F730F10001CD78 /* StarRatingController.swift in Sources */,
 				042CD92424F4C4EB00ADFCB5 /* SearchViewController.swift in Sources */,
 				042CD93624F4C9C500ADFCB5 /* MainTabBarController.swift in Sources */,
-				0473F80124F7869E00FCAB5C /* CalloutView.swift in Sources */,
+				0473F80124F7869E00FCAB5C /* TruckCalloutView.swift in Sources */,
 				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				0473F80324F796A300FCAB5C /* Truck+MKAnnotation.swift in Sources */,
 				E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */,

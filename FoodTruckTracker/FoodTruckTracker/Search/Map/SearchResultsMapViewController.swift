@@ -11,6 +11,7 @@ import MapKit
 import UIKit
 
 class SearchResultsMapViewController: UIViewController {
+    
     // MARK: - Public Properties
     
     var apiController: APIController?
@@ -44,40 +45,23 @@ class SearchResultsMapViewController: UIViewController {
         }
     }
     
+    private var shouldCenterOnUser = true
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.register(
-            MKMarkerAnnotationView.self,
-            forAnnotationViewWithReuseIdentifier: NSStringFromClass(Truck.self)
-        )
-        
-        mapView.register(
-            MKMarkerAnnotationView.self,
-            forAnnotationViewWithReuseIdentifier: NSStringFromClass(MKUserLocation.self)
-        )
-        
         mapView.delegate = self
         mapView.showsUserLocation = true
+        registerAnnotationViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showUser()
-    }
-    
-    func showUser() {
-        if let userCoordinate = mapView.userLocation.location?.coordinate {
-            let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
-            let region = MKCoordinateRegion(
-                center: userCoordinate,
-                span: span
-            )
-            mapView.setRegion(region, animated: true)
+        if shouldCenterOnUser {
+            centerOnUser()
         }
-        
     }
     
     // MARK: - Navigation
@@ -93,6 +77,34 @@ class SearchResultsMapViewController: UIViewController {
     func reloadData() {
         guard let trucks = fetchedResultsController?.fetchedObjects else { return }
         displayedTrucks = trucks
+    }
+    
+    // MARK: - Private Methods
+    
+    /// Centers the map on the user's current location
+    private func centerOnUser() {
+        shouldCenterOnUser = false
+        
+        if let userCoordinate = mapView.userLocation.location?.coordinate {
+            let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+            let region = MKCoordinateRegion(
+                center: userCoordinate,
+                span: span
+            )
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    private func registerAnnotationViews() {
+        mapView.register(
+            MKMarkerAnnotationView.self,
+            forAnnotationViewWithReuseIdentifier: NSStringFromClass(Truck.self)
+        )
+        
+        mapView.register(
+            MKMarkerAnnotationView.self,
+            forAnnotationViewWithReuseIdentifier: NSStringFromClass(MKUserLocation.self)
+        )
     }
     
     // MARK: - Testing Buttons
@@ -196,7 +208,18 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
         annotationView.markerTintColor = .systemOrange
         annotationView.canShowCallout = true
         
-        let calloutView = CalloutView(frame: .zero)
+        annotationView.detailCalloutAccessoryView = calloutView(for: truck)
+        
+        let rightButton = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = rightButton
+        
+        return annotationView
+    }
+    
+    /// Sets up a callout view with the truck's image, cuisine,
+    /// and distance from the user
+    func calloutView(for truck: Truck) -> TruckCalloutView {
+        let calloutView = TruckCalloutView(frame: .zero)
         
         calloutView.cuisine = truck.cuisineType
         
@@ -207,30 +230,29 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
             calloutView.distance = meters.string
         }
         
-        apiController?.fetchTruckImage(at: truck.imageOfTruck!) { result in
-            switch result {
-            case .success(let image):
-                DispatchQueue.main.async {
-                    calloutView.image = image
+        if let truckImage = truck.imageOfTruck {
+            apiController?.fetchTruckImage(at: truckImage) { result in
+                switch result {
+                case .success(let image):
+                    DispatchQueue.main.async {
+                        calloutView.image = image
+                    }
+                case .failure(let error):
+                    print(error)
                 }
-            case .failure(let error):
-                print(error)
             }
+        } else {
+            calloutView.image = UIImage(systemName: "photo")
         }
         
-        annotationView.detailCalloutAccessoryView = calloutView
-        
-        let rightButton = UIButton(type: .detailDisclosure)
-        annotationView.rightCalloutAccessoryView = rightButton
-        
-        return annotationView
+        return calloutView
     }
     
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         guard let truck = view.annotation as? Truck else {
-            fatalError("Only Trucks are supported as annotations at this time")
+            fatalError("Only Trucks should have a callout accessory control")
         }
         performSegue(withIdentifier: "ShowTruckDetail", sender: truck)
     }
