@@ -38,8 +38,10 @@ extension MainTabBarController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // Store location in user defaults?
-        // Observe changes to location 
+        guard let location = locations.first else { return }
+        
+        UserDefaults.lastLatitude = location.coordinate.latitude
+        UserDefaults.lastLongitude = location.coordinate.longitude
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
