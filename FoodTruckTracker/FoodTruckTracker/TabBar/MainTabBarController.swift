@@ -10,15 +10,14 @@ import CoreLocation
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    var locationManager: CLLocationManager?
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
     
     // MARK: - Navigation
@@ -33,7 +32,7 @@ class MainTabBarController: UITabBarController {
 extension MainTabBarController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
-            locationManager?.requestLocation()
+            locationManager.requestLocation()
         }
     }
     
