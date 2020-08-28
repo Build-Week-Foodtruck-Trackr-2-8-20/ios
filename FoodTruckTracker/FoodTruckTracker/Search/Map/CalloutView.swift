@@ -6,7 +6,6 @@
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
-import MapKit
 import UIKit
 
 class CalloutView: UIView {
