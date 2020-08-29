@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -22,6 +23,9 @@ enum NetworkError: Error {
     case failedSignIn
     case noToken
     case tryAgain
+    case noId
+    case noRep
+    case noEncode
 }
 
 class APIController {
@@ -158,7 +162,7 @@ class APIController {
     }
 
     // Method used to fetch All diners
-    func fetchAllDiners(completion: @escaping CompletionStringArrayHandler = { _ in }) {
+    func fetchAllDiners(for diner: User, completion: @escaping CompletionStringArrayHandler = { _ in }) {
         var request = URLRequest(url: dinerURL)
         request.httpMethod = HTTPMethod.get.rawValue
 
@@ -189,6 +193,42 @@ class APIController {
         }
         task.resume()
     }
+
+    // Method used to Send truck to Server
+//    func sendtruckToServer(truck: Truck, completion: @escaping CompletionHandler = {_ in }) {
+//        guard let uuid = truck.truckId else {
+//            completion(.failure(.noId))
+//            return
+//        }
+//
+//        let requestURL = baseURL.appendingPathComponent(uuid.uuidString).appendingPathExtension("json")
+//        var request = URLRequest(url: requestURL)
+//        request.httpMethod = "PUT"
+//
+//        do {
+//            guard let representation =  else {
+//                completion(.failure(.noRep))
+//                return
+//            }
+//            request.httpBody = try JSONEncoder().encode(representation)
+//        } catch {
+//
+//            print("Error encoding task: \(truck), \(error)")
+//            completion(.failure(.noEncode))
+//            return
+//        }
+//
+//        let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
+//            if let error = error {
+//                print("Error PUTting task to server: \(error)")
+//                completion(.failure(.otherError))
+//                return
+//            }
+//
+//            completion(.success(true))
+//        }
+//        entry.resume()
+//    }
 
     //    Method used to fetch Truck details
     func fetchAllTrucksWithRating(for truckName: String, completion: @escaping CompletionStringArrayHandler = { _ in }) {
@@ -258,4 +298,5 @@ class APIController {
 //    Method used to delete from APImod
 
 }
+
 
