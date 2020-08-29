@@ -40,6 +40,7 @@
 		60A080282EFC4E043ADEAD9A /* Pods_FoodTruckTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */; };
 		B15DC9239E331808574B2B93 /* Pods_FoodTruckTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303162DB83EEEBDB370A10BF /* Pods_FoodTruckTrackerTests.framework */; };
 		E1620C0124F5FBA0007F00AC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1620C0024F5FBA0007F00AC /* APIController.swift */; };
+		E17FC1A824F9EA2D0091751A /* Truck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17FC1A724F9EA2D0091751A /* Truck.swift */; };
 		E18BA93424F75226005C54BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18BA93324F75226005C54BE /* User.swift */; };
 		E18BA93624F7614A005C54BE /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18BA93524F7614A005C54BE /* Bearer.swift */; };
 		E1F681CC24F7E4D2007228CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F681CB24F7E4D2007228CE /* LoginViewController.swift */; };
@@ -118,6 +119,7 @@
 		C844942581457EE9796E0E59 /* Pods_FoodTruckTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTruckTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89ADC8A7D1102BDFBE28662 /* Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTruckTracker-FoodTruckTrackerUITests/Pods-FoodTruckTracker-FoodTruckTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1620C0024F5FBA0007F00AC /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		E17FC1A724F9EA2D0091751A /* Truck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truck.swift; sourceTree = "<group>"; };
 		E18BA93324F75226005C54BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E18BA93524F7614A005C54BE /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		E1F681CB24F7E4D2007228CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				E1620C0024F5FBA0007F00AC /* APIController.swift */,
 				E18BA93324F75226005C54BE /* User.swift */,
 				E18BA93524F7614A005C54BE /* Bearer.swift */,
+				E17FC1A724F9EA2D0091751A /* Truck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				0473F80324F796A300FCAB5C /* Truck+MKAnnotation.swift in Sources */,
 				E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */,
+				E17FC1A824F9EA2D0091751A /* Truck.swift in Sources */,
 				E4D5D64D24F60D690082374F /* MenuTableViewController.swift in Sources */,
 				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
