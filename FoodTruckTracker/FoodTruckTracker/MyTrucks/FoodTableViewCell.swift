@@ -12,10 +12,15 @@ class FoodTableViewCell: UITableViewCell {
 
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var foodItemLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    static let reuseIdentifier = "FoodCell"
+    
+    var menuItem: MenuItem? {
+        didSet {
+            
+        }
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

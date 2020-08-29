@@ -10,10 +10,16 @@ import UIKit
 
 class TruckDetailViewController: UITabBarController {
 
+    var apiController: APIController?
+    var truck: Truck?
+    var wasEdited = false
+    var truckImageName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = editButtonItem
+        updateViews()
+        getTruckImageDetails()
     }
     
 
@@ -24,14 +30,63 @@ class TruckDetailViewController: UITabBarController {
     @IBOutlet weak var cuisineTypeTextField: UITextField!
     @IBOutlet weak var truckNameTextField: UITextField!
     @IBOutlet weak var truckImageView: UIImageView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if wasEdited {
+            guard let cuisineType = cuisineTypeTextField.text, !cuisineType.isEmpty,
+                let truck = truck else { return }
+            truck.cuisineType = cuisineType
+            truck.truckName = truckNameTextField.text
+            
+            
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            hoursOfOperationTextField.text = formatter.string(from: truck.departureTime!)
+//   ???      apiController.sendTruckToServer(truck: truck)
+            do {
+                try CoreDataStack.shared.mainContext.save()
+            } catch {
+                NSLog("Error saving truck object context: \(error)")
+            }
+        }
     }
-    */
-
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing { wasEdited = true}
+        hoursOfOperationTextField.isUserInteractionEnabled = editing
+        aboutTextView.isUserInteractionEnabled = editing
+        cuisineTypeTextField.isUserInteractionEnabled = editing
+        truckNameTextField.isUserInteractionEnabled = editing
+        truckImageView.isUserInteractionEnabled = editing
+        
+    }
+    
+    func getTruckImageDetails() {
+        guard let apiController = apiController,
+            let truckName = self.truckImageName else { return }
+        apiController.fetchTruckImage(at: truckName) { (result) in
+            if let truck = try? result.get() {
+                DispatchQueue.main.async {
+                    self.updateViews(with: truck)
+                }
+                apiController.fetchTruckImage(at: truck.imageURL) { (result) in
+                    if let image = try? result.get() {
+                        DispatchQueue.main.async {
+                            self.truckImageView.image = image
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func updateViews() {
+        truckNameTextField.text = truck?.truckName
+        cuisineTypeTextField.text = truck?.cuisineType
+        aboutTextView.text = truck?.description
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        hoursOfOperationTextField.text = formatter.string(from: (truck?.departureTime)!)
+    }
 }

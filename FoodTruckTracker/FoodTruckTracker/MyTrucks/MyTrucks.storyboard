@@ -45,6 +45,9 @@
                                                 <segment title="Arrive"/>
                                                 <segment title="Depart"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="arriveAndDepart:" destination="o7e-YS-uVu" eventType="valueChanged" id="XDy-uu-PJN"/>
+                                            </connections>
                                         </segmentedControl>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -169,11 +172,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fvi-Ng-pyb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IuJ-gt-vGz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="ydC-2o-LcH">
-                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="IuJ-gt-vGz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutTextView" destination="AyX-Jf-qb3" id="Snn-Bd-M9H"/>
