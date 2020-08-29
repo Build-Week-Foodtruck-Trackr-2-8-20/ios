@@ -10,6 +10,15 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    //MARK: - IBOutlets -
+    @IBOutlet weak var foodItemPrice: UILabel!
+    @IBOutlet weak var foodItemPriceTextField: UITextField!
+    @IBOutlet weak var foodItemName: UILabel!
+    @IBOutlet weak var foodItemTextField: UITextField!
+    @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var itemDescriptionTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

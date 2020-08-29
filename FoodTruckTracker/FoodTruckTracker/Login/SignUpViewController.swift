@@ -20,7 +20,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var doneButton: UIButton!
     
     var apiController: APIController?
     var signUpType = userType.operators
@@ -37,8 +36,8 @@ class SignUpViewController: UIViewController {
 //            let email = emailTextField.text,
 //        !email.isEmpty,
 //            let password = passwordTextField.text,
-//        !password.isEmpty
-////            let role = userSegmentedControl = userType.diners {
+//        !password.isEmpty,
+//            let role = userSegmentedControl = userType.diners {
 //            let user = User(username: username, password: password, email: email, role: role, id: <#T##Int?#>)
 //
 //        }
