@@ -22,7 +22,11 @@ class FavoriteTrucksTableViewController: UITableViewController {
         ]
 
         let context = CoreDataStack.shared.mainContext
-        let fetchedResultsController = NSFetchedResultsController<Truck>(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        let fetchedResultsController = NSFetchedResultsController<Truck>(
+            fetchRequest: fetchRequest,
+            managedObjectContext: context,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
@@ -44,7 +48,6 @@ class FavoriteTrucksTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-
 
         return cell
     }

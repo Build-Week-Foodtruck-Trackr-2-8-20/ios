@@ -9,10 +9,10 @@
 import UIKit
 
 class FavoriteTrucksTableViewCell: UITableViewCell {
-    @IBOutlet weak var truckNameLabel: UILabel!
-    @IBOutlet weak var cuisineTypeLabel: UILabel!
-    @IBOutlet weak var hoursLabel: UILabel!
-    @IBOutlet weak var starRatingStackView: StarRatingController!
+    @IBOutlet private weak var truckNameLabel: UILabel!
+    @IBOutlet private weak var cuisineTypeLabel: UILabel!
+    @IBOutlet private weak var hoursLabel: UILabel!
+    @IBOutlet private weak var starRatingStackView: StarRatingController!
 
     var truck: Truck? {
         didSet {

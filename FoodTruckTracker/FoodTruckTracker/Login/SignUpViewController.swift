@@ -6,7 +6,7 @@
 //  Copyright © 2020 Josh Kocsis. All rights reserved.
 //
 
-enum userType {
+enum UserType {
     case diners
     case operators
 }
@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     var apiController: APIController?
-    var signUpType = userType.operators
+    var signUpType = UserType.operators
 
     override func viewDidLoad() {
         super.viewDidLoad()

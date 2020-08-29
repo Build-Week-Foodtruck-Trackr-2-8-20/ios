@@ -10,32 +10,20 @@ import UIKit
 
 class TruckTableViewCell: UITableViewCell {
 
-    //MARK: - IBOutlets -
-    // need avg star rating
-    @IBOutlet weak var truckNameLabel: UILabel!
-    @IBOutlet weak var cuisineTypeLabel: UILabel!
-    @IBOutlet weak var arriveAndDepart: UISegmentedControl!
-    
-    static let reuseIdentifier = "TruckCell"
-    
-    var truck: Truck? {
-        didSet {
-          updateViews()
-        }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
+
+    // MARK: - IBOutlets -
+    // need avg star rating
+    @IBOutlet private weak var truckNameLabel: UILabel!
+    @IBOutlet private weak var cuisineTypeLabel: UILabel!
+    @IBOutlet private weak var arriveAndDepart: UISegmentedControl!
     
-    func updateViews() {
-        guard let truck = truck else { return }
-        truckNameLabel.text = truck.truckName
-        cuisineTypeLabel.text = truck.cuisineType
-        
-        let truckStatus: TruckStatus
-        if let status = truck.truckStatus {
-            truckStatus = TruckStatus(rawValue: status)!
-        } else {
-            truckStatus = .depart
-        }
-        arriveAndDepart.selectedSegmentIndex = TruckStatus.allCases.firstIndex(of: truckStatus) ?? 1
-        arriveAndDepart.isUserInteractionEnabled = isEditing
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
 }
