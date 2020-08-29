@@ -11,6 +11,20 @@ import CoreData
 
 extension Truck {
 
+//    var truckRepresentation: TruckRepresentation? {
+//           guard let truckStatus =  truckStatus else { return nil }
+//
+//        return TruckRepresentation(cuisineType: cuisineType ?? "",
+//                                   truckName: truckName,
+//                                   customerRating: customerRating,
+//                                   customerRatingAve: customerRatingAvg,
+//                                   departureTime: departureTime!,
+//                                   imageOfTruck : imageOfTruck ?? "",
+//                                   truckLatitude: truckLatitude,
+//                                   truckLongitude: truckLongitude,
+//                                   truckId: truckId)
+//       }
+
     @discardableResult convenience init(cuisineType: String,
                                         truckName: String,
                                         customerRating: Int16,
