@@ -67,19 +67,19 @@ class FavoriteTrucksTableViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "TruckDetail":
-            if let detailVC = segue.destination as? TruckDetailViewController,
-                let indexPath = tableView.indexPathForSelectedRow {
-                detailVC. = fetchedResultsController.object(at: indexPath)
-                detailVC.apiController = apiController
-            }
-        default:
-            break
-        }
-    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "TruckDetail":
+//            if let detailVC = segue.destination as? TruckDetailViewController,
+//                let indexPath = tableView.indexPathForSelectedRow {
+//                detailVC. = fetchedResultsController.object(at: indexPath)
+//                detailVC.apiController = apiController
+//            }
+//        default:
+//            break
+//        }
+//    }
 }
 
 extension FavoriteTrucksTableViewController: NSFetchedResultsControllerDelegate {
