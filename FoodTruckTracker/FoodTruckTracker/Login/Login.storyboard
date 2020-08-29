@@ -77,22 +77,6 @@
             </objects>
             <point key="canvasLocation" x="-1211" y="1622"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="4WB-tC-emA">
-            <objects>
-                <viewControllerPlaceholder id="xek-FQ-XaU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ESn-by-rCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1725" y="2168"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="efn-Ic-dY4">
-            <objects>
-                <viewControllerPlaceholder id="3sW-kD-Xqj" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5W7-xF-ogq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-801" y="2168"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="O6N-sg-Ua0">
             <objects>
@@ -193,7 +177,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="nLG-a2-Ggz"/>
                     <connections>
-                        <outlet property="doneButton" destination="6Tn-7d-nqa" id="GW4-B8-7Wa"/>
                         <outlet property="emailTextField" destination="V4l-dv-F67" id="xwT-O3-sQN"/>
                         <outlet property="passwordTextField" destination="VuP-gA-W20" id="fds-dP-coA"/>
                         <outlet property="userNameTextField" destination="Wu7-sy-0XP" id="hYF-Pr-oYj"/>
