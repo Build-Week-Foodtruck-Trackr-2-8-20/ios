@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TruckDetailViewController: UITabBarController {
 
@@ -19,7 +20,7 @@ class TruckDetailViewController: UITabBarController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
         updateViews()
-        getTruckImageDetails()
+//        getTruckImageDetails()
     }
     
 
@@ -34,16 +35,15 @@ class TruckDetailViewController: UITabBarController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if wasEdited {
-            guard let cuisineType = cuisineTypeTextField.text, !cuisineType.isEmpty,
-                let truck = truck else { return }
-            truck.cuisineType = cuisineType
-            truck.truckName = truckNameTextField.text
-            
+            guard let truck = truck else { return }
+            cuisineTypeTextField.text = truck.cuisineType
+            truckNameTextField.text = truck.truckName
+            truckImageView.image = UIImage(named: truck.imageOfTruck ?? "")
             
             let formatter = DateFormatter()
             formatter.timeStyle = .short
             hoursOfOperationTextField.text = formatter.string(from: truck.departureTime!)
-//   ???      apiController.sendTruckToServer(truck: truck)
+            //apiController.sendTruckToServer(truck: truck)
             do {
                 try CoreDataStack.shared.mainContext.save()
             } catch {
@@ -59,18 +59,20 @@ class TruckDetailViewController: UITabBarController {
         cuisineTypeTextField.isUserInteractionEnabled = editing
         truckNameTextField.isUserInteractionEnabled = editing
         truckImageView.isUserInteractionEnabled = editing
-        
     }
-    
+    func getTruckDetails() {
+        guard let apiController = apiController else { return }
+    }
+
     func getTruckImageDetails() {
         guard let apiController = apiController,
             let truckName = self.truckImageName else { return }
-        apiController.fetchTruckImage(at: truckName) { (result) in
+        apiController.fetchTruckImage(at: truckName){ (result) in
             if let truck = try? result.get() {
                 DispatchQueue.main.async {
-                    self.updateViews(with: truck)
+                    self.updateViews()
                 }
-                apiController.fetchTruckImage(at: truck.imageURL) { (result) in
+                apiController.fetchTruckImage(at: truck.imageOfTruck) { (result) in
                     if let image = try? result.get() {
                         DispatchQueue.main.async {
                             self.truckImageView.image = image
@@ -78,6 +80,22 @@ class TruckDetailViewController: UITabBarController {
                     }
                 }
             }
+        }
+    }
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        guard let truck = truck else { return }
+        cuisineTypeTextField.text = truck.cuisineType
+        truckNameTextField.text = truck.truckName
+        truckImageView.image = UIImage(named: truck.imageOfTruck ?? "")
+        
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        hoursOfOperationTextField.text = formatter.string(from: truck.departureTime!)
+        //apiController.sendTruckToServer(truck: truck)
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            NSLog("Error saving truck object context: \(error)")
         }
     }
     
@@ -89,4 +107,5 @@ class TruckDetailViewController: UITabBarController {
         formatter.timeStyle = .short
         hoursOfOperationTextField.text = formatter.string(from: (truck?.departureTime)!)
     }
+    
 }

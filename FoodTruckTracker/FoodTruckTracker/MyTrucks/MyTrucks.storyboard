@@ -55,7 +55,7 @@
                                     <outlet property="arriveAndDepart" destination="mPG-CT-tdG" id="65p-ww-4TR"/>
                                     <outlet property="cuisineTypeLabel" destination="vOt-r4-8rU" id="OYC-Cz-gHw"/>
                                     <outlet property="truckNameLabel" destination="Rtr-Yd-VSd" id="I38-nu-n8J"/>
-                                    <segue destination="gtT-NF-xPg" kind="show" id="CGB-Vu-4zA"/>
+                                    <segue destination="gtT-NF-xPg" kind="show" identifier="TruckDetailSegue" id="CGB-Vu-4zA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -172,7 +172,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fvi-Ng-pyb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IuJ-gt-vGz"/>
+                    <navigationItem key="navigationItem" id="IuJ-gt-vGz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FO7-Vb-KDu">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="gtT-NF-xPg" id="9Gn-5X-iBN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutTextView" destination="AyX-Jf-qb3" id="Snn-Bd-M9H"/>
@@ -328,7 +334,7 @@
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left.fill" catalog="system" id="mT3-dn-kVc">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="Gmx-u0-Mtp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gmx-u0-Mtp">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
