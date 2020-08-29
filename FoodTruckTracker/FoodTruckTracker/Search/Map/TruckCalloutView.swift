@@ -8,13 +8,23 @@
 
 import UIKit
 
-class CalloutView: UIView {
-    var truck: Truck? {
-        didSet {
-            updateViews()
-        }
+class TruckCalloutView: UIView {
+    
+    var cuisine: String? {
+        get { cuisineLabel.text }
+        set { cuisineLabel.text = newValue }
     }
     
+    var distance: String? {
+        get { distanceLabel.text }
+        set { distanceLabel.text = newValue }
+    }
+    
+    var image: UIImage? {
+        get { imageView.image }
+        set { imageView.image = newValue }
+    }
+
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var cuisineLabel: UILabel!
@@ -31,25 +41,9 @@ class CalloutView: UIView {
     }
     
     private func setUp() {
-        Bundle.main.loadNibNamed("CalloutView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("TruckCalloutView", owner: self, options: nil)
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    private func updateViews() {
-        guard let truck = truck,
-              let imageOfTruck = truck.imageOfTruck else { return }
-        
-        // TODO: Proper call to fetch image using APIController
-        if let imageURL = URL(string: imageOfTruck),
-           let imageData = try? Data(contentsOf: imageURL) {
-            imageView.image = UIImage(data: imageData)
-        }
-        
-        cuisineLabel.text = truck.cuisineType
-        
-        // TODO: Set distance label (need to get location of user)
-        // distanceLabel.text =
     }
 }
