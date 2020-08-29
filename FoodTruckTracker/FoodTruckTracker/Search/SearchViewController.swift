@@ -10,6 +10,13 @@ import CoreData
 import UIKit
 
 class SearchViewController: UIViewController {
+    // MARK: - Public Properties
+    
+    var apiController: APIController? {
+        didSet {
+            mapVC.apiController = apiController
+        }
+    }
     
     // MARK: - IBOutlets
     

@@ -9,6 +9,11 @@
 import Foundation
 import CoreData
 
+enum TruckStatus: String, CaseIterable {
+    case arrive
+    case depart
+}
+
 extension Truck {
 
 //    var truckRepresentation: TruckRepresentation? {
@@ -26,6 +31,7 @@ extension Truck {
 //       }
 
     @discardableResult convenience init(cuisineType: String,
+                                        truckStatus: TruckStatus = .arrive,
                                         truckName: String,
                                         customerRating: Int16,
                                         customerRatingAvg: Int16,
@@ -36,6 +42,7 @@ extension Truck {
                                         truckId: Int,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
+        self.truckStatus = truckStatus.rawValue
         self.truckName = truckName
         self.cuisineType = cuisineType
         self.customerRating = customerRating
