@@ -16,30 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TruckCell" rowHeight="96" id="o7e-YS-uVu" customClass="TruckTableViewCell" customModule="FoodTruckTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="96"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TruckCell" rowHeight="102" id="o7e-YS-uVu" customClass="TruckTableViewCell" customModule="FoodTruckTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o7e-YS-uVu" id="Hpv-P1-Lfe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtr-Yd-VSd">
-                                            <rect key="frame" x="20" y="19" width="58" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Truck #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtr-Yd-VSd">
+                                            <rect key="frame" x="20" y="19" width="195" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuisine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOt-r4-8rU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOt-r4-8rU">
                                             <rect key="frame" x="20" y="64" width="99" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-CT-tdG">
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-CT-tdG">
                                             <rect key="frame" x="271" y="33" width="123" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <segments>
                                                 <segment title="Arrive"/>
@@ -50,12 +47,23 @@
                                             </connections>
                                         </segmentedControl>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vOt-r4-8rU" firstAttribute="leading" secondItem="Hpv-P1-Lfe" secondAttribute="leadingMargin" id="5VZ-1f-5GE"/>
+                                        <constraint firstItem="vOt-r4-8rU" firstAttribute="top" secondItem="Rtr-Yd-VSd" secondAttribute="bottom" constant="24" id="7me-Id-yfx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vOt-r4-8rU" secondAttribute="bottom" constant="6" id="E51-BG-Ciy"/>
+                                        <constraint firstItem="mPG-CT-tdG" firstAttribute="top" secondItem="Hpv-P1-Lfe" secondAttribute="topMargin" constant="22" id="FKS-fl-aPg"/>
+                                        <constraint firstItem="vOt-r4-8rU" firstAttribute="top" secondItem="Rtr-Yd-VSd" secondAttribute="bottom" constant="24" id="Jpd-qd-hbi"/>
+                                        <constraint firstItem="Rtr-Yd-VSd" firstAttribute="top" secondItem="Hpv-P1-Lfe" secondAttribute="topMargin" constant="8" id="bVa-EU-Vxx"/>
+                                        <constraint firstItem="Rtr-Yd-VSd" firstAttribute="leading" secondItem="Hpv-P1-Lfe" secondAttribute="leadingMargin" id="f8b-9r-skw"/>
+                                        <constraint firstItem="mPG-CT-tdG" firstAttribute="trailing" secondItem="Hpv-P1-Lfe" secondAttribute="trailingMargin" id="kUV-kd-8yV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mPG-CT-tdG" secondAttribute="bottom" constant="27" id="sVe-5K-RCX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="arriveAndDepart" destination="mPG-CT-tdG" id="65p-ww-4TR"/>
                                     <outlet property="cuisineTypeLabel" destination="vOt-r4-8rU" id="OYC-Cz-gHw"/>
                                     <outlet property="truckNameLabel" destination="Rtr-Yd-VSd" id="I38-nu-n8J"/>
-                                    <segue destination="gtT-NF-xPg" kind="show" id="CGB-Vu-4zA"/>
+                                    <segue destination="gtT-NF-xPg" kind="show" identifier="TruckDetailSegue" id="CGB-Vu-4zA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,7 +72,13 @@
                             <outlet property="delegate" destination="kNh-Za-R5P" id="2j5-vt-oRg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Operator Truck List" id="cpe-pQ-Mr4"/>
+                    <navigationItem key="navigationItem" title="Operator Truck List" id="cpe-pQ-Mr4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XzP-QZ-zE1">
+                            <connections>
+                                <segue destination="gtT-NF-xPg" kind="show" identifier="AddTruckSegue" id="kMA-Bu-eym"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaV-zP-1Ug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,7 +100,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-ZO-y59">
-                                <rect key="frame" x="20" y="343" width="374" height="383"/>
+                                <rect key="frame" x="20" y="343" width="374" height="228.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-sn-EOL">
                                         <rect key="frame" x="141" y="0.0" width="92.5" height="20.5"/>
@@ -121,36 +135,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-al-xIJ">
-                                        <rect key="frame" x="164" y="241.5" width="46.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AyX-Jf-qb3">
-                                        <rect key="frame" x="0.0" y="275" width="374" height="108"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="Lvn-pE-nhh"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fgM-PI-mvi" firstAttribute="leading" secondItem="uDf-ZO-y59" secondAttribute="leading" id="0C6-c1-uIw"/>
-                                    <constraint firstAttribute="trailing" secondItem="AyX-Jf-qb3" secondAttribute="trailing" id="0oU-EE-x9x"/>
                                     <constraint firstAttribute="trailing" secondItem="fgM-PI-mvi" secondAttribute="trailing" id="7Dp-a1-1Hh"/>
                                     <constraint firstAttribute="trailing" secondItem="Ybr-Vx-vTQ" secondAttribute="trailing" id="H90-Uy-fPq"/>
                                     <constraint firstItem="tph-gW-Zg8" firstAttribute="leading" secondItem="uDf-ZO-y59" secondAttribute="leading" id="PDp-uL-28C"/>
                                     <constraint firstAttribute="trailing" secondItem="tph-gW-Zg8" secondAttribute="trailing" id="PwW-C5-GBj"/>
                                     <constraint firstItem="Ybr-Vx-vTQ" firstAttribute="leading" secondItem="uDf-ZO-y59" secondAttribute="leading" id="cvz-z8-xxt"/>
-                                    <constraint firstItem="AyX-Jf-qb3" firstAttribute="leading" secondItem="uDf-ZO-y59" secondAttribute="leading" id="qLx-0t-Nd9"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0N-bb-yhB">
-                                <rect key="frame" x="182" y="746" width="50" height="36"/>
+                                <rect key="frame" x="182" y="671.5" width="50" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
@@ -167,15 +163,20 @@
                             <constraint firstItem="3F2-6I-KhA" firstAttribute="trailing" secondItem="fvi-Ng-pyb" secondAttribute="trailing" id="YSn-0q-5Vu"/>
                             <constraint firstItem="3F2-6I-KhA" firstAttribute="leading" secondItem="fvi-Ng-pyb" secondAttribute="leading" id="o7s-gX-qRT"/>
                             <constraint firstItem="uDf-ZO-y59" firstAttribute="leading" secondItem="fvi-Ng-pyb" secondAttribute="leading" constant="20" id="v8L-76-TCC"/>
-                            <constraint firstItem="D0N-bb-yhB" firstAttribute="top" secondItem="uDf-ZO-y59" secondAttribute="bottom" constant="20" id="w2C-4X-Rk8"/>
+                            <constraint firstItem="D0N-bb-yhB" firstAttribute="top" secondItem="uDf-ZO-y59" secondAttribute="bottom" constant="100" id="w2C-4X-Rk8"/>
                             <constraint firstItem="uDf-ZO-y59" firstAttribute="top" secondItem="3F2-6I-KhA" secondAttribute="bottom" constant="10" id="ywf-EE-PWF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fvi-Ng-pyb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IuJ-gt-vGz"/>
+                    <navigationItem key="navigationItem" id="IuJ-gt-vGz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FO7-Vb-KDu">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="gtT-NF-xPg" id="9Gn-5X-iBN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="aboutTextView" destination="AyX-Jf-qb3" id="Snn-Bd-M9H"/>
                         <outlet property="cuisineTypeTextField" destination="fgM-PI-mvi" id="XL5-Yd-vQd"/>
                         <outlet property="hoursOfOperationTextField" destination="Ybr-Vx-vTQ" id="8C7-I1-WKd"/>
                         <outlet property="truckImageView" destination="3F2-6I-KhA" id="eXA-Ua-mMZ"/>
@@ -328,7 +329,7 @@
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left.fill" catalog="system" id="mT3-dn-kVc">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="Gmx-u0-Mtp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gmx-u0-Mtp">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -369,6 +370,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bsC-re-vhk"/>
+        <segue reference="kMA-Bu-eym"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>

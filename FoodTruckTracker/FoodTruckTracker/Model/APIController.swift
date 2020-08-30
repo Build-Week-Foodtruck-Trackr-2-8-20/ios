@@ -272,7 +272,7 @@ class APIController {
 
     //    Method used to fetch a trucks Image
 
-    func fetchTruckImage(at urlString: String, completion: @escaping CompletionImageHandler = { _ in }) {
+    func fetchTruckImage(at urlString: String, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
 
         let imageURL = URL(string: urlString)!
 
