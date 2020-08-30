@@ -26,6 +26,7 @@ enum NetworkError: Error {
     case noId
     case noRep
     case noEncode
+    case otherError
 }
 
 class APIController {
@@ -194,41 +195,97 @@ class APIController {
         task.resume()
     }
 
-    // Method used to Send truck to Server
-//    func sendtruckToServer(truck: Truck, completion: @escaping CompletionHandler = {_ in }) {
-//        guard let uuid = truck.truckId else {
-//            completion(.failure(.noId))
-//            return
-//        }
-//
-//        let requestURL = baseURL.appendingPathComponent(uuid.uuidString).appendingPathExtension("json")
-//        var request = URLRequest(url: requestURL)
-//        request.httpMethod = "PUT"
-//
-//        do {
-//            guard let representation =  else {
-//                completion(.failure(.noRep))
-//                return
-//            }
-//            request.httpBody = try JSONEncoder().encode(representation)
-//        } catch {
-//
-//            print("Error encoding task: \(truck), \(error)")
-//            completion(.failure(.noEncode))
-//            return
-//        }
-//
-//        let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
-//            if let error = error {
-//                print("Error PUTting task to server: \(error)")
-//                completion(.failure(.otherError))
-//                return
-//            }
-//
-//            completion(.success(true))
-//        }
-//        entry.resume()
-//    }
+//     Method used to Send truck to Server
+    func sendtruckToServer(truck: Truck, completion: @escaping CompletionHandler = {_ in }) {
+        guard let truckId = truck.truckId else {
+            completion(.failure(.noId))
+            return
+        }
+
+        let requestURL = baseURL.appendingPathComponent(truckId.uuidString).appendingPathExtension("json")
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "PUT"
+
+        do {
+            guard let representation =  truck.truckRepresentation else {
+                completion(.failure(.noRep))
+                return
+            }
+            request.httpBody = try JSONEncoder().encode(representation)
+        } catch {
+
+            print("Error encoding task: \(truck), \(error)")
+            completion(.failure(.noEncode))
+            return
+        }
+
+        let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                print("Error PUTting task to server: \(error)")
+                completion(.failure(.otherError))
+                return
+            }
+
+            completion(.success(true))
+        }
+        entry.resume()
+    }
+
+
+    /*
+     func sendEntryToServer(entry: Entry, completion: @escaping CompletionHandler = {_ in }) {
+         guard let uuid = entry.identifier else {
+             completion(.failure(.noIdentifier))
+             return
+         }
+
+         let requestURL = baseURL.appendingPathComponent(uuid.uuidString).appendingPathExtension("json")
+         var request = URLRequest(url: requestURL)
+         request.httpMethod = "PUT"
+
+         do {
+             guard let representation = entry.entryRepresentation else {
+                 completion(.failure(.noRep))
+                 return
+             }
+             request.httpBody = try JSONEncoder().encode(representation)
+         } catch {
+
+             print("Error encoding task: \(entry), \(error)")
+             completion(.failure(.noEncode))
+             return
+         }
+
+         let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
+             if let error = error {
+                 print("Error PUTting task to server: \(error)")
+                 completion(.failure(.otherError))
+                 return
+             }
+
+             completion(.success(true))
+         }
+         entry.resume()
+     }
+
+     func deleteEntryFromServer(_ entry: Entry, completion: @escaping CompletionHandler = { _ in }) {
+         guard let uuid = entry.identifier else {
+             completion(.failure(.noIdentifier))
+             return
+         }
+
+         let requestURL = baseURL.appendingPathComponent(uuid.uuidString).appendingPathExtension("json")
+         var request = URLRequest(url: requestURL)
+         request.httpMethod = "DELETE"
+
+         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+             print(response!)
+             completion(.success(true))
+
+         }
+         task.resume()
+     }
+     */
 
     //    Method used to fetch Truck details
     func fetchAllTrucksWithRating(for truckName: String, completion: @escaping CompletionStringArrayHandler = { _ in }) {
