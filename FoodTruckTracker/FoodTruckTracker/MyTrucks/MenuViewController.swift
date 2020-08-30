@@ -17,7 +17,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var foodItemTextField: UITextField!
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var itemDescriptionTextView: UITextView!
-    
+    var menuItem: MenuItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
