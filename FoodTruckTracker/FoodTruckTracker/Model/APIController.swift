@@ -196,40 +196,40 @@ class APIController {
     }
 
 //     Method used to Send truck to Server
-    func sendtruckToServer(truck: Truck, completion: @escaping CompletionHandler = {_ in }) {
-        guard let truckId = truck.truckId else {
-            completion(.failure(.noId))
-            return
-        }
-
-        let requestURL = baseURL.appendingPathComponent(truckId.uuidString).appendingPathExtension("json")
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = "PUT"
-
-        do {
-            guard let representation =  truck.truckRepresentation else {
-                completion(.failure(.noRep))
-                return
-            }
-            request.httpBody = try JSONEncoder().encode(representation)
-        } catch {
-
-            print("Error encoding task: \(truck), \(error)")
-            completion(.failure(.noEncode))
-            return
-        }
-
-        let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
-            if let error = error {
-                print("Error PUTting task to server: \(error)")
-                completion(.failure(.otherError))
-                return
-            }
-
-            completion(.success(true))
-        }
-        entry.resume()
-    }
+//    func sendtruckToServer(truck: Truck, completion: @escaping CompletionHandler = {_ in }) {
+//        guard let truckId = truck.truckId else {
+//            completion(.failure(.noId))
+//            return
+//        }
+//
+//        let requestURL = baseURL.appendingPathComponent(truckId.uuidString).appendingPathExtension("json")
+//        var request = URLRequest(url: requestURL)
+//        request.httpMethod = "PUT"
+//
+//        do {
+//            guard let representation =  truck.truckRepresentation else {
+//                completion(.failure(.noRep))
+//                return
+//            }
+//            request.httpBody = try JSONEncoder().encode(representation)
+//        } catch {
+//
+//            print("Error encoding task: \(truck), \(error)")
+//            completion(.failure(.noEncode))
+//            return
+//        }
+//
+//        let entry = URLSession.shared.dataTask(with: request) { (_, _, error) in
+//            if let error = error {
+//                print("Error PUTting task to server: \(error)")
+//                completion(.failure(.otherError))
+//                return
+//            }
+//
+//            completion(.success(true))
+//        }
+//        entry.resume()
+//    }
 
 
     /*
