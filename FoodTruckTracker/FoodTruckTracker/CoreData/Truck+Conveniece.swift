@@ -16,19 +16,29 @@ enum TruckStatus: String, CaseIterable {
 
 extension Truck {
 
-//    var truckRepresentation: TruckRepresentation? {
-//           guard let truckStatus =  truckStatus else { return nil }
-//
-//        return TruckRepresentation(cuisineType: cuisineType ?? "",
-//                                   truckName: truckName,
-//                                   customerRating: customerRating,
-//                                   customerRatingAve: customerRatingAvg,
-//                                   departureTime: departureTime!,
-//                                   imageOfTruck : imageOfTruck ?? "",
-//                                   truckLatitude: truckLatitude,
-//                                   truckLongitude: truckLongitude,
-//                                   truckId: truckId)
-//       }
+    var truckRepresentation: TruckRepresentation? {
+           guard let truckname = truckName,
+            let truckStatus = truckStatus else { return nil }
+
+        return TruckRepresentation(customerRatingAvg: customerRatingAvg,
+                                   customerRatings: customerRating,
+                                   cuisineType: cuisineType ?? "",
+                                   departureTime: Date(),
+                                   imageOfTruck: imageOfTruck ?? "",
+                                   truckId: truckId,
+                                   truckName: truckname,
+                                   truckStatus: truckStatus)
+        /*
+         customerRatingAvg: customerRatingAvg,
+         customerRatings: customerRating,
+         cuisineType: cuisineType ?? "",
+         departureTime: Date(),
+         imageOfTruck: imageOfTruck ?? "",
+         truckId: truckId,
+         truckname = truckname,
+         truckStatus = truckStatus
+         */
+       }
 
     @discardableResult convenience init(cuisineType: String,
                                         truckStatus: TruckStatus = .arrive,
