@@ -75,7 +75,7 @@ class TruckDetailViewController: UITabBarController {
                 DispatchQueue.main.async {
                     self.updateViews()
                 }
-                apiController.fetchTruckImage(at: truck.imageOfTruck) { (result) in
+                apiController.fetchTruckImage(at: truckName) { (result) in
                     if let image = try? result.get() {
                         DispatchQueue.main.async {
                             self.truckImageView.image = image
