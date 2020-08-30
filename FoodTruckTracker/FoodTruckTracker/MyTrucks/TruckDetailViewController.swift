@@ -103,11 +103,11 @@ class TruckDetailViewController: UITabBarController {
     }
     
     func updateViews() {
-        truckNameTextField.text = truck?.truckName
-        cuisineTypeTextField.text = truck?.cuisineType
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        hoursOfOperationTextField.text = formatter.string(from: (truck?.departureTime)!)
+//        truckNameTextField.text = truck?.truckName
+//        cuisineTypeTextField.text = truck?.cuisineType
+//        let formatter = DateFormatter()
+//        formatter.timeStyle = .short
+//        hoursOfOperationTextField.text = formatter.string(from: (truck?.departureTime)!)
     }
     
 }
