@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class TruckDetailViewController: UITabBarController {
 
@@ -68,7 +70,7 @@ class TruckDetailViewController: UITabBarController {
         apiController.fetchTruckImage(at: truckName) { (result) in
             if let truck = try? result.get() {
                 DispatchQueue.main.async {
-                    self.updateViews(with: truck)
+                    self.updateViews()
                 }
                 apiController.fetchTruckImage(at: truck.imageURL) { (result) in
                     if let image = try? result.get() {
