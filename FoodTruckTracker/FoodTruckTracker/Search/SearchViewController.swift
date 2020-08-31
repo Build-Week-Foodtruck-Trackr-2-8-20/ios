@@ -61,7 +61,9 @@ class SearchViewController: UIViewController {
         addChild(listVC)
         resultsContainer.addSubview(listVC.view)
         listVC.didMove(toParent: self)
-        listVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        listVC.view.fillSuperview()
+        
+        listVC.fetchedResultsController = fetchedResultsController
         currentResultsVC = listVC
         
         addChild(mapVC)
@@ -96,6 +98,8 @@ class SearchViewController: UIViewController {
             completion: nil
         )
         
+        destinationVC.view.fillSuperview()
+        
         self.currentResultsVC = destinationVC
     }
 }
@@ -128,3 +132,35 @@ protocol SearchResultsViewController: UIViewController, NSFetchedResultsControll
 }
 extension SearchResultsListViewController: SearchResultsViewController {}
 extension SearchResultsMapViewController: SearchResultsViewController {}
+
+
+extension UIView {
+    /// Fills the view's superview completely.
+    ///
+    /// Also sets `translatesAutoResizingMaskIntoConstraints` to false.
+    /// - Precondition: View must be embedded in a superview.
+    func fillSuperview(respectingSafeArea: Bool = false) {
+        guard let superview = superview else {
+            assertionFailure("\(Self.self) has no superview to fill")
+            return
+        }
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        if respectingSafeArea {
+            NSLayoutConstraint.activate([
+                self.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
+                self.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+                self.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
+                self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                self.topAnchor.constraint(equalTo: superview.topAnchor),
+                self.bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+                self.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+                self.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            ])
+        }
+    }
+}
