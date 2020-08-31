@@ -33,23 +33,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-3f-oa7">
-                                                    <rect key="frame" x="20" y="254" width="113.5" height="113"/>
+                                                    <rect key="frame" x="20" y="254" width="132" height="113"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKc-yD-boB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="113.5" height="26.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="132" height="26.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cuisine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMD-2U-bQ8">
-                                                            <rect key="frame" x="0.0" y="34.5" width="113.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="34.5" width="132" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIX-xf-HRc" customClass="StarRatingView" customModule="FoodTruckTracker" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="63" width="113.5" height="50"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="0.0" y="63" width="132" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="0rv-zH-CBP"/>
                                                             </constraints>
@@ -91,6 +90,7 @@
                                             <outlet property="starRating" destination="KIX-xf-HRc" id="4hG-wK-DYn"/>
                                             <outlet property="truckImageView" destination="uTw-qh-G6M" id="h74-lS-yPD"/>
                                             <outlet property="truckNameLabel" destination="XKc-yD-boB" id="SI0-mT-IT8"/>
+                                            <segue destination="Vqd-Eg-0qN" kind="show" id="W5L-Mc-mwb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
