@@ -48,6 +48,7 @@ class TruckListTableViewCell: UITableViewCell {
     }
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         truckImage = nil
     }
 }
