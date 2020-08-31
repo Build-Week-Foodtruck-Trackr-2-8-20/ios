@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     
     var apiController: APIController? {
         didSet {
+            listVC.apiController = apiController
             mapVC.apiController = apiController
         }
     }
@@ -61,7 +62,9 @@ class SearchViewController: UIViewController {
         addChild(listVC)
         resultsContainer.addSubview(listVC.view)
         listVC.didMove(toParent: self)
-        listVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        listVC.view.fillSuperview()
+        
+        listVC.fetchedResultsController = fetchedResultsController
         currentResultsVC = listVC
         
         addChild(mapVC)
@@ -95,6 +98,8 @@ class SearchViewController: UIViewController {
             animations: nil,
             completion: nil
         )
+        
+        destinationVC.view.fillSuperview()
         
         self.currentResultsVC = destinationVC
     }
