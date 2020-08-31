@@ -21,16 +21,13 @@ class FoodTruckTrackerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testSignUp() {
+        let apiController = APIController()
+        let user = User(username: "Jkocsis", password: "Jkocsis", email: "josh.s.kocsis@gmail.com", role: 1, id: 1)
+        apiController.registerUser(with: user)
+        apiController.loginUser(with: user)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        XCTAssert(user.email == "josh.s.kcosis@gmail.com")
+        
     }
-
 }

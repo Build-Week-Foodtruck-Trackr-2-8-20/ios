@@ -67,24 +67,24 @@ class TruckDetailViewController: UITabBarController {
     }
 
         
-    func getTruckImageDetails() {
-        guard let apiController = apiController,
-            let truckName = self.truck?.imageOfTruck else { return }
-        apiController.fetchTruckImage(at: truckName) { (result) in
-            if let truck = try? result.get() {
-                DispatchQueue.main.async {
-                    self.updateViews()
-                }
-                apiController.fetchTruckImage(at: truck.imageOfTruck) { (result) in
-                    if let image = try? result.get() {
-                        DispatchQueue.main.async {
-                            self.truckImageView.image = image
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    func getTruckImageDetails() {
+//        guard let apiController = apiController,
+//            let truckName = self.truck?.imageOfTruck else { return }
+//        apiController.fetchTruckImage(at: truckName) { (result) in
+//            if let truck = try? result.get() {
+//                DispatchQueue.main.async {
+//                    self.updateViews()
+//                }
+//                apiController.fetchTruckImage(at: truck.imageOfTruck) { (result) in
+//                    if let image = try? result.get() {
+//                        DispatchQueue.main.async {
+//                            self.truckImageView.image = image
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         guard let truck = truck else { return }
         cuisineTypeTextField.text = truck.cuisineType
