@@ -643,7 +643,6 @@
 				E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */,
 				E17FC1A824F9EA2D0091751A /* Truck.swift in Sources */,
 				E4D5D64D24F60D690082374F /* MenuTableViewController.swift in Sources */,
-				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,
 				042CD92824F4C4EB00ADFCB5 /* SearchResultsListViewController.swift in Sources */,
@@ -652,7 +651,6 @@
 				042CD92724F4C4EB00ADFCB5 /* SearchResultsMapViewController.swift in Sources */,
 				E4D5D65524F60EEA0082374F /* FoodTableViewCell.swift in Sources */,
 				0473F80524F8AA4600FCAB5C /* UserDefaults.swift in Sources */,
-				E4D5D65724F742670082374F /* TruckController.swift in Sources */,
 				E1F681CC24F7E4D2007228CE /* LoginViewController.swift in Sources */,
 				E4D5D65324F60EC40082374F /* TruckTableViewCell.swift in Sources */,
 			);

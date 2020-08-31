@@ -55,16 +55,16 @@ class MyTrucksTableViewController: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TruckTableViewCell.reuseIdentifier, for: indexPath) as? TruckTableViewCell else {
-            fatalError("Can't dequeue cell of type \(TruckTableViewCell.reuseIdentifier)")
-        }
-        cell.truck = fetchedResultsController.object(at: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: TruckTableViewCell.reuseIdentifier, for: indexPath) as? TruckTableViewCell else {
+//            fatalError("Can't dequeue cell of type \(TruckTableViewCell.reuseIdentifier)")
+//        }
+//        cell.truck = fetchedResultsController.object(at: indexPath)
+//
+//        // Configure the cell...
+//
+//        return cell
+//    }
     
 
     /*

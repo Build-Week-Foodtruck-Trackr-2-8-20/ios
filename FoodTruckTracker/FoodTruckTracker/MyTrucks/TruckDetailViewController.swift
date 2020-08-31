@@ -19,7 +19,7 @@ class TruckDetailViewController: UITabBarController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
         updateViews()
-        getTruckImageDetails()
+//        getTruckImageDetails()
     }
     
 
@@ -62,24 +62,24 @@ class TruckDetailViewController: UITabBarController {
         
     }
     
-    func getTruckImageDetails() {
-        guard let apiController = apiController,
-            let truckName = self.truckImageName else { return }
-        apiController.fetchTruckImage(at: truckName) { (result) in
-            if let truck = try? result.get() {
-                DispatchQueue.main.async {
-                    self.updateViews(with: truck)
-                }
-                apiController.fetchTruckImage(at: truck.imageURL) { (result) in
-                    if let image = try? result.get() {
-                        DispatchQueue.main.async {
-                            self.truckImageView.image = image
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    func getTruckImageDetails() {
+//        guard let apiController = apiController,
+//            let truckName = self.truckImageName else { return }
+//        apiController.fetchTruckImage(at: truckName) { (result) in
+//            if let truck = try? result.get() {
+//                DispatchQueue.main.async {
+//                    self.updateViews(with: truck)
+//                }
+//                apiController.fetchTruckImage(at: truck.imageURL) { (result) in
+//                    if let image = try? result.get() {
+//                        DispatchQueue.main.async {
+//                            self.truckImageView.image = image
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     private func updateViews() {
         truckNameTextField.text = truck?.truckName

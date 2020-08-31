@@ -13,7 +13,6 @@ class FavoriteTrucksTableViewController: UITableViewController {
 
     private let apiController = APIController()
     var truck: Truck?
-    let reuseIdentifier = "FavoriteTrucks"
 
     lazy var fetchedResultsController: NSFetchedResultsController<Truck> = {
         let fetchRequest: NSFetchRequest<Truck> = Truck.fetchRequest()
@@ -47,7 +46,10 @@ class FavoriteTrucksTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTrucksTableViewCell.reuseIdentifier, for: indexPath) as? FavoriteTrucksTableViewCell else { fatalError("Can't deque cell of type \(FavoriteTrucksTableViewCell.reuseIdentifier)")}
+
+        cell.delegate = self
+        cell.truck = fetchedResultsController.object(at: indexPath)
 
         return cell
     }
@@ -131,5 +133,11 @@ extension FavoriteTrucksTableViewController: NSFetchedResultsControllerDelegate 
         @unknown default:
             break
         }
+    }
+}
+
+extension FavoriteTrucksTableViewController: FavoriteTrucksDelegate {
+    func favoritesUpdated(favorite: Truck) {
+//        apiController.s
     }
 }
