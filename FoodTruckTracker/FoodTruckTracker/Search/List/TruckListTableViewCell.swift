@@ -17,14 +17,13 @@ class TruckListTableViewCell: UITableViewCell {
         get { truckImageView.image }
     }
     
-    
     @IBOutlet private var truckImageView: UIImageView!
     @IBOutlet private var truckNameLabel: UILabel!
     @IBOutlet private var cuisineTypeLabel: UILabel!
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var starRating: StarRatingView!
     
-    func updateViews() {
+    private func updateViews() {
         guard let truck = truck else { return }
         truckNameLabel.text = truck.truckName
         cuisineTypeLabel.text = truck.cuisineType
@@ -32,7 +31,7 @@ class TruckListTableViewCell: UITableViewCell {
         updateDistanceLabel(with: truck)
     }
     
-    func updateDistanceLabel(with truck: Truck) {
+    private func updateDistanceLabel(with truck: Truck) {
         guard let lat = UserDefaults.lastLatitude,
             let lon = UserDefaults.lastLongitude else {
                 return
@@ -48,4 +47,7 @@ class TruckListTableViewCell: UITableViewCell {
         distanceLabel.text = meters.string
     }
 
+    override func prepareForReuse() {
+        truckImage = nil
+    }
 }

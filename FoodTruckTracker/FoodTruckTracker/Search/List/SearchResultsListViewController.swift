@@ -61,7 +61,9 @@ extension SearchResultsListViewController: UITableViewDataSource {
         if let apiController = apiController, let imageUrlString = truck?.imageOfTruck {
             apiController.fetchTruckImage(at: imageUrlString) { (result) in
                 if let image = try? result.get() {
-                    cell.truckImage = image
+                    DispatchQueue.main.async {
+                        cell.truckImage = image
+                    }
                 }
             }
         }
