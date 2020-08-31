@@ -12,6 +12,8 @@ import UIKit
 class SearchResultsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var apiController: APIController?
     var fetchedResultsController: NSFetchedResultsController<Truck>?
     
     override func viewDidLoad() {
@@ -53,7 +55,17 @@ extension SearchResultsListViewController: UITableViewDataSource {
                 fatalError("Unable to cast cell as \(TruckListTableViewCell.self)")
         }
         
-        cell.truck = fetchedResultsController?.object(at: indexPath)
+        let truck = fetchedResultsController?.object(at: indexPath)
+        cell.truck = truck
+        
+        if let apiController = apiController, let imageUrlString = truck?.imageOfTruck {
+            apiController.fetchTruckImage(at: imageUrlString) { (result) in
+                if let image = try? result.get() {
+                    cell.truckImage = image
+                }
+            }
+        }
+        
         return cell
     }
 }

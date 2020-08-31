@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     
     var apiController: APIController? {
         didSet {
+            listVC.apiController = apiController
             mapVC.apiController = apiController
         }
     }

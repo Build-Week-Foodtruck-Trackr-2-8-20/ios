@@ -12,18 +12,23 @@ import UIKit
 class TruckListTableViewCell: UITableViewCell {
     
     var truck: Truck? { didSet { updateViews() } }
+    var truckImage: UIImage? {
+        set { truckImageView.image = newValue }
+        get { truckImageView.image }
+    }
     
     
     @IBOutlet private var truckImageView: UIImageView!
     @IBOutlet private var truckNameLabel: UILabel!
     @IBOutlet private var cuisineTypeLabel: UILabel!
     @IBOutlet private var distanceLabel: UILabel!
-    @IBOutlet private var starRating: StarRatingController!
+    @IBOutlet private var starRating: StarRatingView!
     
     func updateViews() {
         guard let truck = truck else { return }
         truckNameLabel.text = truck.truckName
         cuisineTypeLabel.text = truck.cuisineType
+        starRating.value = Int(truck.customerRatingAvg)
         updateDistanceLabel(with: truck)
     }
     
@@ -36,7 +41,7 @@ class TruckListTableViewCell: UITableViewCell {
         let userLocation = CLLocation(latitude: lat, longitude: lon)
         
         let truckLocation = CLLocation(latitude: truck.coordinate.latitude,
-        longitude: truck.coordinate.longitude)
+                                       longitude: truck.coordinate.longitude)
         
         let distance = userLocation.distance(from: truckLocation)
         let meters = Measurement(value: distance, unit: UnitLength.meters)
