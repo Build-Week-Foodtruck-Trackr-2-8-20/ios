@@ -27,12 +27,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
 
     var apiController: APIController?
-<<<<<<< HEAD
     var signUpType = UserType.operators
-=======
     var userType = UserType.diners
     var loginType = LoginType.signUp
->>>>>>> main
 
     override func viewDidLoad() {
         super.viewDidLoad()
