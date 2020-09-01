@@ -15,13 +15,11 @@ class TruckDetailViewController: UITabBarController {
     var truck: Truck?
     var wasEdited = false
     var truckName: String?
-//    let truckImage: (Truck)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        navigationItem.rightBarButtonItem = editButtonItem
-        updateViews()
-//        getTruckImageDetails()
+        updateViews(with: truck!)
     }
     
 
@@ -32,25 +30,25 @@ class TruckDetailViewController: UITabBarController {
     @IBOutlet weak var truckNameTextField: UITextField!
     @IBOutlet weak var truckImageView: UIImageView!
    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if wasEdited {
-            guard let truck = truck else { return }
-            cuisineTypeTextField.text = truck.cuisineType
-            truckNameTextField.text = truck.truckName
-            truckImageView.image = UIImage(named: truck.imageOfTruck ?? "")
-            
-            let formatter = DateFormatter()
-            formatter.timeStyle = .short
-            hoursOfOperationTextField.text = formatter.string(from: truck.departureTime!)
-            //apiController.sendTruckToServer(truck: truck)
-            do {
-                try CoreDataStack.shared.mainContext.save()
-            } catch {
-                NSLog("Error saving truck object context: \(error)")
-            }
-        }
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        if wasEdited {
+//            guard let truck = truck else { return }
+//            cuisineTypeTextField.text = truck.cuisineType
+//            truckNameTextField.text = truck.truckName
+//            truckImageView.image = UIImage(named: truck.imageOfTruck ?? "")
+//
+//            let formatter = DateFormatter()
+//            formatter.timeStyle = .short
+//            hoursOfOperationTextField.text = formatter.string(from: truck.departureTime!)
+//            //apiController.sendTruckToServer(truck: truck)
+//            do {
+//                try CoreDataStack.shared.mainContext.save()
+//            } catch {
+//                NSLog("Error saving truck object context: \(error)")
+//            }
+//        }
+//    }
     
     var truck2 = Truck(cuisineType: "Taco", truckStatus: .arrive, truckName: "Tacos & More", customerRating: 3, customerRatingAvg: 3, departureTime: Date(), imageOfTruck: "", truckLatitude: 44.55, truckLongitude: 44.55, truckId: 23)
     
@@ -62,29 +60,33 @@ class TruckDetailViewController: UITabBarController {
 //        truckNameTextField.isUserInteractionEnabled = editing
 //        truckImageView.isUserInteractionEnabled = editing
     }
-    func getTruckDetails() {
-//        guard let apiController = apiController else { return }
-    }
+   
 
         
-//    func getTruckImageDetails() {
-//        guard let apiController = apiController,
-//            let truckName = self.truck?.imageOfTruck else { return }
-//        apiController.fetchTruckImage(at: truckName) { (result) in
-//            if let truck = try? result.get() {
-//                DispatchQueue.main.async {
-//                    self.updateViews()
-//                }
-//                apiController.fetchTruckImage(at: truck.imageOfTruck) { (result) in
-//                    if let image = try? result.get() {
-//                        DispatchQueue.main.async {
-//                            self.truckImageView.image = image
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
+        
+
+        func getTruckDetails() {
+          guard let apiController = apiController,
+          let truckName = truckName else { return }
+          apiController.fetchAllTrucksWithRating(for: truckName) { (result) in
+            switch result {
+            case .success(let truck):
+              DispatchQueue.main.async {
+//                self.updateViews(with: "\(truck)")
+              }
+              apiController.fetchTruckImage(at: self.truck?.imageOfTruck ?? "") { (result) in
+                if let image = try? result.get() {
+                  DispatchQueue.main.async {
+                    self.truckImageView.image = image
+                  }
+                }
+              }
+            case .failure(let error):
+              print("Error fetching animal detials \(error)")
+            }
+          }
+        }
+        
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         guard let truck = truck else { return }
         cuisineTypeTextField.text = truck.cuisineType
@@ -102,12 +104,13 @@ class TruckDetailViewController: UITabBarController {
         }
     }
     
-    func updateViews() {
-//        truckNameTextField.text = truck?.truckName
-//        cuisineTypeTextField.text = truck?.cuisineType
-//        let formatter = DateFormatter()
-//        formatter.timeStyle = .short
-//        hoursOfOperationTextField.text = formatter.string(from: (truck?.departureTime)!)
+    func updateViews(with truck: Truck) {
+        truckNameTextField.text = truck.truckName
+        cuisineTypeTextField.text = truck.cuisineType
+        truckImageView.image = UIImage(named: truck.imageOfTruck ?? "")
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        hoursOfOperationTextField.text = formatter.string(from: (truck.departureTime ?? Date()))
     }
     
 }
