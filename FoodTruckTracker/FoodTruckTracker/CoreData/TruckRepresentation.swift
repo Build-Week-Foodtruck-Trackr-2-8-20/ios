@@ -13,7 +13,7 @@ struct TruckRepresentation: Codable {
     var customerRatings: Int16
     var cuisineType: String
     var departureTime: Date
-    var imageOfTruck: String
+    var imageOfTruck: URL
     var truckId: Int16
     var truckName: String
     var truckStatus: String
