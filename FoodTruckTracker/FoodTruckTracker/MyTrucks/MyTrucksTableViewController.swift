@@ -39,7 +39,16 @@ class MyTrucksTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    let truck2 = Truck(cuisineType: "Taco", truckStatus: .arrive, truckName: "Tacos & More", customerRating: 3, customerRatingAvg: 3, departureTime: Date(), imageOfTruck: "", truckLatitude: 44.55, truckLongitude: 44.55, truckId: 23)
+    let truck2 = Truck(cuisineType: "Taco",
+                       truckStatus: .arrive,
+                       truckName: "Tacos & More",
+                       customerRating: 3,
+                       customerRatingAvg: 3,
+                       departureTime: Date(),
+                       imageOfTruck: "",
+                       truckLatitude: 44.55,
+                       truckLongitude: 44.55,
+                       truckId: 23)
     
 
     // MARK: - Table view data source

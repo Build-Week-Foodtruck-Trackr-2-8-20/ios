@@ -50,7 +50,16 @@ class TruckDetailViewController: UITabBarController {
 //        }
 //    }
     
-    var truck2 = Truck(cuisineType: "Taco", truckStatus: .arrive, truckName: "Tacos & More", customerRating: 3, customerRatingAvg: 3, departureTime: Date(), imageOfTruck: "", truckLatitude: 44.55, truckLongitude: 44.55, truckId: 23)
+    var truck2 = Truck(cuisineType: "Taco",
+                       truckStatus: .arrive,
+                       truckName: "Tacos & More",
+                       customerRating: 3,
+                       customerRatingAvg: 3,
+                       departureTime: Date(),
+                       imageOfTruck: "",
+                       truckLatitude: 44.55,
+                       truckLongitude: 44.55,
+                       truckId: 23)
     
     override func setEditing(_ editing: Bool, animated: Bool) {
 //        super.setEditing(editing, animated: animated)
