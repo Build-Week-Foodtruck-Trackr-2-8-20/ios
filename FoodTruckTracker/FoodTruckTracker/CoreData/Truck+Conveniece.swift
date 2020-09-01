@@ -18,13 +18,14 @@ extension Truck {
 
     var truckRepresentation: TruckRepresentation? {
            guard let truckname = truckName,
-            let truckStatus = truckStatus else { return nil }
+            let truckStatus = truckStatus,
+            let imageOfTruck = URL(string: imageOfTruck ?? "") else { return nil }
 
         return TruckRepresentation(customerRatingAvg: customerRatingAvg,
                                    customerRatings: customerRating,
                                    cuisineType: cuisineType ?? "",
                                    departureTime: Date(),
-                                   imageOfTruck: imageOfTruck ?? "",
+                                   imageOfTruck: imageOfTruck,
                                    truckId: truckId,
                                    truckName: truckname,
                                    truckStatus: truckStatus)
@@ -46,7 +47,7 @@ extension Truck {
                                         customerRating: Int16,
                                         customerRatingAvg: Int16,
                                         departureTime: Date = Date(),
-                                        imageOfTruck: String,
+                                        imageOfTruck: String?,
                                         truckLatitude: Double,
                                         truckLongitude: Double,
                                         truckId: Int16,

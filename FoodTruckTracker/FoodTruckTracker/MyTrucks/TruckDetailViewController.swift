@@ -50,7 +50,7 @@ class TruckDetailViewController: UITabBarController {
 //        }
 //    }
     
-    var truck2 = Truck(cuisineType: "Taco", truckStatus: .arrive, truckName: "Tacos & More", customerRating: 3, customerRatingAvg: 3, departureTime: Date(), imageOfTruck: "", truckLatitude: 44.55, truckLongitude: 44.55, truckId: 23)
+//    var truck2 = Truck(cuisineType: "Taco", truckStatus: .arrive, truckName: "Tacos & More", customerRating: 3, customerRatingAvg: 3, departureTime: Date(), imageOfTruck: "", truckLatitude: 44.55, truckLongitude: 44.55, truckId: 23)
     
     override func setEditing(_ editing: Bool, animated: Bool) {
 //        super.setEditing(editing, animated: animated)
@@ -65,28 +65,42 @@ class TruckDetailViewController: UITabBarController {
         
         
 
-        func getTruckDetails() {
-          guard let apiController = apiController,
-          let truckName = truckName else { return }
-          apiController.fetchAllTrucksWithRating(for: truckName) { (result) in
-            switch result {
-            case .success(let truck):
-              DispatchQueue.main.async {
+//        func getTruckDetails() {
+//          guard let apiController = apiController,
+//            let imageUrlString = truck?.imageOfTruck,
+//          let truckName = truckName else { return }
+//          apiController.fetchAllTrucksWithRating(for: truckName) { (result) in
+//            switch result {
+//            case .success(let truck):
+//              DispatchQueue.main.async {
 //                self.updateViews(with: "\(truck)")
-              }
-              apiController.fetchTruckImage(at: self.truck?.imageOfTruck ?? "") { (result) in
-                if let image = try? result.get() {
-                  DispatchQueue.main.async {
-                    self.truckImageView.image = image
-                  }
-                }
-              }
-            case .failure(let error):
-              print("Error fetching animal detials \(error)")
-            }
-          }
-        }
-        
+//              }
+//
+//              if let url = URL(string: imageUrlString) {
+//                apiController.fetchTruckImage(imageOfTruck: url) { ( image ) in
+//                                DispatchQueue.main.async {
+//                                    cell.truckImage = image
+//                                }
+//                              }
+//              }
+
+
+                /*
+                 if let apiController = apiController, let imageUrlString = truck?.imageOfTruck,
+                 let url = URL(string: imageUrlString){
+
+                 apiController.fetchTruckImage(imageOfTruck: url) { image in
+                     DispatchQueue.main.async {
+                         cell.truckImage = image
+                     }
+                 }
+                 */
+//            case .failure(let error):
+//              print("Error fetching animal detials \(error)")
+//            }
+//          }
+//        }
+//        
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         guard let truck = truck else { return }
         cuisineTypeTextField.text = truck.cuisineType
