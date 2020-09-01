@@ -10,24 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-    case put = "PUT"
-    case delete = "DELETE"
-}
 
-enum NetworkError: Error {
-    case noData
-    case failedSignUp
-    case failedSignIn
-    case noToken
-    case tryAgain
-    case noId
-    case noRep
-    case noEncode
-    case otherError
-}
 
 enum EndPoints: String {
 // App Login endpoints: Complete
@@ -35,7 +18,26 @@ case register = "auth/register" // Post
 case login = "auth/login" // Post
 }
 
-class APIController {
+final class APIController {
+
+    enum HTTPMethod: String {
+        case get = "GET"
+        case post = "POST"
+        case put = "PUT"
+        case delete = "DELETE"
+    }
+
+    enum NetworkError: Error {
+        case noData
+        case failedSignUp
+        case failedSignIn
+        case noToken
+        case tryAgain
+        case noId
+        case noRep
+        case noEncode
+        case otherError
+    }
 
     // MARK: = URL endpoints
     private let baseURL = URL(string: "https://food-truck-lambda.herokuapp.com/api")!

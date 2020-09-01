@@ -58,12 +58,12 @@ extension SearchResultsListViewController: UITableViewDataSource {
         let truck = fetchedResultsController?.object(at: indexPath)
         cell.truck = truck
         
-        if let apiController = apiController, let imageUrlString = truck?.imageOfTruck {
-            apiController.fetchTruckImage(at: imageUrlString) { result in
-                if let image = try? result.get() {
-                    DispatchQueue.main.async {
-                        cell.truckImage = image
-                    }
+        if let apiController = apiController, let imageUrlString = truck?.imageOfTruck,
+            let url = URL(string: imageUrlString){
+
+            apiController.fetchTruckImage(imageOfTruck: url) { image in
+                DispatchQueue.main.async {
+                    cell.truckImage = image
                 }
             }
         }

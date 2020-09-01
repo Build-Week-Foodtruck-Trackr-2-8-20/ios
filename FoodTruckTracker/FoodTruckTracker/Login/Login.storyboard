@@ -21,19 +21,6 @@
                                     <constraint firstAttribute="height" constant="599" id="aSx-1V-wce"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Efb-o2-Tmb">
-                                <rect key="frame" x="130" y="173" width="142" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYY-fT-2yx">
-                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
-                                        <state key="normal" title="Login"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg9-w3-JWs">
-                                        <rect key="frame" x="88" y="0.0" width="54" height="30"/>
-                                        <state key="normal" title="Sign Up"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-Lp-lc8">
                                 <rect key="frame" x="20" y="412" width="374" height="177"/>
                                 <subviews>
@@ -76,15 +63,21 @@
                                     <constraint firstAttribute="height" constant="177" id="9Zj-Mw-big"/>
                                 </constraints>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4wU-Q4-82Q">
+                                <rect key="frame" x="140" y="231" width="135" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Sign Up"/>
+                                    <segment title="Log In"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zlv-51-Cug" firstAttribute="trailing" secondItem="Pbb-V1-y1F" secondAttribute="trailing" id="03E-Ga-ZF5"/>
-                            <constraint firstItem="Efb-o2-Tmb" firstAttribute="top" secondItem="Pbb-V1-y1F" secondAttribute="top" constant="33" id="8T7-Mv-6WF"/>
                             <constraint firstItem="DKn-Lp-lc8" firstAttribute="bottom" secondItem="zlv-51-Cug" secondAttribute="bottom" constant="-150" id="8iN-O5-DEe"/>
                             <constraint firstItem="Pbb-V1-y1F" firstAttribute="trailing" secondItem="DKn-Lp-lc8" secondAttribute="trailing" constant="20" id="Xqj-iR-DAu"/>
                             <constraint firstItem="DKn-Lp-lc8" firstAttribute="leading" secondItem="Pbb-V1-y1F" secondAttribute="leading" constant="20" id="lm6-FJ-GJj"/>
-                            <constraint firstItem="Efb-o2-Tmb" firstAttribute="leading" secondItem="Pbb-V1-y1F" secondAttribute="leading" constant="130" id="nZx-d8-sKW"/>
                             <constraint firstItem="zlv-51-Cug" firstAttribute="top" secondItem="Pbb-V1-y1F" secondAttribute="top" id="rC0-By-zK9"/>
                             <constraint firstItem="zlv-51-Cug" firstAttribute="leading" secondItem="Pbb-V1-y1F" secondAttribute="leading" id="t3c-Uw-kK8"/>
                         </constraints>
@@ -93,7 +86,7 @@
                     <navigationItem key="navigationItem" id="8aD-Gw-5te"/>
                     <connections>
                         <outlet property="emailTextField" destination="dyO-qp-1cU" id="ro5-Oc-359"/>
-                        <outlet property="loginTypeSegmentedControl" destination="Efb-o2-Tmb" id="xih-n5-iP1"/>
+                        <outlet property="loginTypeSegmentControl" destination="4wU-Q4-82Q" id="Erh-ag-hKw"/>
                         <outlet property="passwordTextField" destination="Wfl-hY-NDE" id="hzw-LA-gP6"/>
                         <outlet property="signInButton" destination="yyJ-sC-38X" id="8Ya-fL-v7v"/>
                         <outlet property="userNameTextField" destination="u1C-Yr-ykX" id="U8J-Gu-oVI"/>
