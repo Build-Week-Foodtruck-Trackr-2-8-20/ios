@@ -17,7 +17,7 @@ class StarRatingController: UIStackView {
     var starsFilled = "starfill"
 
     override func draw(_ rect: CGRect) {
-        let myView = self.subviews.filter{$0 is UIButton}
+        let myView = self.subviews.filter { $0 is UIButton }
         var starTag = 1
         for theView in myView {
             if let theButton = theView as? UIButton {
@@ -31,7 +31,7 @@ class StarRatingController: UIStackView {
 
     @objc func pressed(sender: UIButton) {
         starRating = sender.tag
-        let myView = self.subviews.filter{$0 is UIButton}
+        let myView = self.subviews.filter { $0 is UIButton }
         for theView in myView {
             if let theButton = theView as? UIButton {
                 if theButton.tag > sender.tag {

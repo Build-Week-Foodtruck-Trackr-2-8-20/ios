@@ -659,7 +659,6 @@
 				E4D5D64B24F5FBCD0082374F /* MyTrucksTableViewController.swift in Sources */,
 				E17FC1A824F9EA2D0091751A /* Truck.swift in Sources */,
 				E4D5D64D24F60D690082374F /* MenuTableViewController.swift in Sources */,
-				042CD95024F4DAB700ADFCB5 /* MenuItem+Conveniece.swift in Sources */,
 				51D93BBA24EE1C01009FC1A4 /* AppDelegate.swift in Sources */,
 				51D93BBC24EE1C01009FC1A4 /* SceneDelegate.swift in Sources */,
 				042CD92824F4C4EB00ADFCB5 /* SearchResultsListViewController.swift in Sources */,

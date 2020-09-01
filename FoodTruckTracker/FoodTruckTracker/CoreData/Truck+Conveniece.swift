@@ -53,7 +53,7 @@ extension Truck {
                                         truckId: Int16,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
-        self.truckStatus = truckStatus.rawValue
+//        self.truckStatus = truckStatus.rawValue
         self.truckName = truckName
         self.cuisineType = cuisineType
         self.customerRating = customerRating

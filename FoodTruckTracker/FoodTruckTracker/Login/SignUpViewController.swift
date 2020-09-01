@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
 
     var apiController: APIController?
+    var signUpType = UserType.operators
     var userType = UserType.diners
     var loginType = LoginType.signUp
 
