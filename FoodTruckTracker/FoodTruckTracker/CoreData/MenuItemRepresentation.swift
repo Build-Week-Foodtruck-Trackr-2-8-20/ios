@@ -13,9 +13,19 @@ struct MenuItemRepresentation: Codable {
     var customerRatings: Int16
     var itemDescription: String
     var itemName: String
-    var itemPhotos: String
+    var itemPhotos: URL
     var itemPrice: Double
     var truckId: Int16
+
+    /*
+     customerRatingAvg: Integer 16,
+     customerratings: Integer 16,
+     itemDescription: String,
+     itemName: String,
+     itemPhotos: String,
+     itermPrice: Double,
+     truckID: Integar 16
+     */
 
     enum CodingKeys: String, CodingKey {
         case customerRatingAvg

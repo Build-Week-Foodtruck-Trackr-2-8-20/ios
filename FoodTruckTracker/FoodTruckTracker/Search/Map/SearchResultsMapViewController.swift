@@ -124,7 +124,7 @@ class SearchResultsMapViewController: UIViewController {
                       """,
                       truckLatitude: lat,
                       truckLongitude: lon,
-                      truckId: i)
+                      truckId: Int16(i))
             }
             try? CoreDataStack.shared.save()
         }
@@ -230,15 +230,11 @@ extension SearchResultsMapViewController: MKMapViewDelegate {
             calloutView.distance = meters.string
         }
         
-        if let truckImage = truck.imageOfTruck {
-            apiController?.fetchTruckImage(at: truckImage) { result in
-                switch result {
-                case .success(let image):
-                    DispatchQueue.main.async {
-                        calloutView.image = image
-                    }
-                case .failure(let error):
-                    print(error)
+        if let truckImage = truck.imageOfTruck,
+            let url = URL(string: truckImage){
+            apiController?.fetchTruckImage(imageOfTruck: url) { image in
+                DispatchQueue.main.async {
+                    calloutView.image = image
                 }
             }
         } else {

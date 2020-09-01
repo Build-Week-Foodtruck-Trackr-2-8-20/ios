@@ -12,6 +12,6 @@ struct User: Codable {
     let username: String
     let password: String
     let email: String
-    let role: Int
-    let id: Int?
+//    let role: Int
+//    let id: Int?
 }
